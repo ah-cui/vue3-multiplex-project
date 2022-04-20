@@ -1,0 +1,149 @@
+﻿
+<!DOCTYPE html>
+<html lang="zh-cn">
+	<head>
+		<meta charset="utf-8"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
+		<meta name="keywords" content="" />
+		<meta name="description" content="" />
+	</head>
+	<body>
+		<div id="app" class="cui-multiplex"></div>
+	</body>
+	<script id="runtime" type="text/javascript">
+		/**
+		 * by zerostyle on 20210923
+		 * 
+		 * 本函数为自执行函数，执行后即刻删除，用于处理webpack编译chunk后的脚本、样式、用户自定义样式、脚本的加载
+		 * 因本框架支持编译后修改应用基路径，因此资源文件需要动态计算输出
+		 * !!!!本函数内存在一个变量需在调整基路径时同时调整：whereRuntimeCfg !!!!
+		 * 部署模式下：如基路径为"/ahcui",则调整此变量为"/ahcui/static/js/runtime/config.js",
+		 * 开发模式下默认基路径为"/"，且不存在可统一调整的配置项
+		 * 基路径需要前端的部署容器支持，如通过nginx的alias/root实现虚拟路径，或urlrewrite地址重写实现虚拟路径等方式
+		 * */
+		(function(){
+
+			var whereRuntimeCfg="/static/js/runtime/config.js";
+
+			if(!<%= prod %>){
+				whereRuntimeCfg="/static/js/runtime/config.js";
+			}
+			var metas = document.getElementsByTagName("meta"),
+				head = document.getElementsByTagName("head")[0],
+				body = document.getElementsByTagName("body")[0],
+				scriptLoadSuccess = function(){
+					try{
+						if(!window.__cui_runtime_config__){
+							throw new Error("配置文件不存在配置节点"); 
+						}
+						if(!<%= prod %>)
+						{
+							window.__cui_runtime_config__.__app_public_path__="/"
+						}
+						loadDefaultResource(window.__cui_runtime_config__); 
+						loadWebpackResource(window.__cui_runtime_config__);
+						body.removeChild(document.getElementById("runtime"));
+					}
+					catch(e){
+						throw e;
+					}
+				},
+				scriptLoadError = function(){
+					throw new Error("请指定whereRuntimeCfg所指向的运行时配置文件");
+				};
+			
+			var runtimeScript=document.createElement("script");
+			runtimeScript.type = "text/javascript";
+			runtimeScript.src = whereRuntimeCfg +"?d="+Math.random()*1000;
+			runtimeScript.onload = scriptLoadSuccess;
+			runtimeScript.onerror = scriptLoadError;
+			head.appendChild(runtimeScript);
+
+			var loadDefaultResource=function(config){
+				var defaultJS=[
+					//如有添加到head部分的JS文件，请按照以下格式自行添加
+					//{appendto:head,type:"text/javascript",src:""},
+					//如有添加到body部分的JS文件，请按照以下格式自行添加
+					//{appendto:body,type:"text/javascript",src:""},
+				];
+				var defaultCSS=[
+					//如有添加到head部分的CSS文件，请按照以下格式自行添加
+					{appendto:head, rel:"shortcut icon",type:"text/css",href:"static/img/favicon.ico"},
+					
+					//如有添加到body部分的CSS文件，请按照以下格式自行添加
+					//{appendto:body,rel:"stylesheet",type:"text/css",href:""},
+				];
+				if(config.__app_page_title__){
+					document.title = config.__app_page_title__;
+				}
+				for(var i=0;i<metas.length;i++){
+					if(metas[i].name=="keywords" && config.__app_page_keyWords__){
+						metas[i].content=config.__app_page_keyWords__;
+					}
+					if(metas[i].name=="description" && config.__app_page_description__){
+						metas[i].content=config.__app_page_description__;
+					}
+				}
+				for(var i=0;i<defaultCSS.length;i++){
+					var tag;
+					if(defaultCSS[i].rel){
+						tag=document.createElement("link");
+					}
+					else{
+						tag=document.createElement("style");
+					}
+                    for(var property in defaultCSS[i])
+                    {
+                        if(property=='href')
+                        {
+                            defaultCSS[i][property]=config.__app_public_path__ + defaultCSS[i][property];
+                        }
+                        tag[property]=defaultCSS[i][property];
+                    }
+                    defaultCSS[i].appendto.appendChild(tag);
+                }
+                for(var i=0;i<defaultJS.length;i++){
+                    var tag     =       document.createElement("script");
+                    for(var property in defaultJS[i])
+                    {
+                        if(property=='src')
+                        {
+                            defaultJS[i][property]=config.__app_public_path__ + defaultJS[i][property];
+                        }
+                        tag[property]=defaultJS[i][property];
+                    }
+                    defaultJS[i].appendto.appendChild(tag);
+                }
+				
+			}
+			//以下为加载webpack编译后的chunk入口样式与脚本，勿动！
+			var loadWebpackResource=function(config){
+				var webpackPublicPath="<%= htmlWebpackPlugin.files.publicPath %>";
+				var webpackJS=("<%= htmlWebpackPlugin.files.js %>").split(",");
+				var webpackCSS=("<%= htmlWebpackPlugin.files.css %>").split(",");
+				var webpackManiest="<%= htmlWebpackPlugin.files.manifest %>";
+				var webpackFavicon="<%= htmlWebpackPlugin.files.favicon %>";
+				for(var i=0;i<webpackCSS.length;i++){
+					var cssPath =       ((webpackCSS[i].indexOf('/')==0)?webpackCSS[i].substring(1,webpackCSS[i].length):webpackCSS[i]);
+					var tag     =       document.createElement("link");
+					tag.type    =       "text/css";
+					tag.rel     =       "stylesheet";
+					tag.href    =       config.__app_public_path__ + cssPath;
+					head.appendChild(tag);
+				}
+				for(var i=0;i<webpackJS.length;i++){
+					var jsPath  =       ((webpackJS[i].indexOf('/')==0)?webpackJS[i].substring(1,webpackJS[i].length):webpackJS[i]);
+					var tag     =       document.createElement("script");
+					tag.type    =       "text/javascript";
+					tag.src     =       config.__app_public_path__ + jsPath;
+					body.appendChild(tag);
+				}
+			}
+			
+
+		})()
+	</script>
+</html>

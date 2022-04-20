@@ -1,0 +1,33 @@
+{
+  "name": "project",
+  "version": "1.0.0",
+  "description": "@ahcui项目模板,Powered By @ahcui/vue3-multiplex核心库",
+  "author": "",
+  "private": true,
+  "license": "",
+  "repository": "",
+  "scripts": {
+    "browser": "npx browserslist",
+    "dev": " cross-env  webpack serve --inline --progress --config build/project/webpack.conf.dev.js",
+    "dev:demo": " cross-env  webpack serve --inline --progress --config build/demo/webpack.conf.dev.js",
+    "build": " node build/project/webpack.conf.build.js",
+    "build:demo": " node build/demo/webpack.conf.build.js",
+    "debug-webpack": "node --inspect-brk build/webpack.dev.conf.js --inline --progress"
+  },
+  "dependencies": {
+    "@ahcui/vue-example": "file:examples",
+    "@ahcui/vue3-multiplex": "file:ahcui-vue3-multiplex-1.0.0-rc1.tgz",
+    "mockjs": "1.1.0",
+    "axios": "0.25.0",
+    "element-plus": "2.0.2",
+    "mitt": "3.0.0",
+    "vue": "3.2.29",
+    "vue-router": "4.0.12",
+    "vuex": "4.0.2"
+  },
+  "devDependencies": {},
+  "engines": {
+    "node": ">= 14.17.0",
+    "npm": ">= 6.14.15"
+  }
+}
