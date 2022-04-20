@@ -1,14 +1,12 @@
 {
   "name": "@ahcui/vue-example",
-  "version": "2.1.0",
+  "version": "1.0.0-rc",
   "description": "@ahcui前端框架演示模式,Powered By @ahcui/vue3-multiplex核心库",
   "author": "anonymous",
   "private": true,
   "scripts": {},
   "dependencies": {
-    "markdown-it-vue": "^1.0.11",
-    "particles.js": "^2.0.0",
-    "requirejs": "^2.3.6" 
+    "markdown-it-vue": "^1.0.11"
   },
   "devDependencies": {},
   "engines": {

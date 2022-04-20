@@ -1,6 +1,6 @@
 /*.md
 /.vscode
-/node_modules
+/node_modules*
 *.gitkeep
 /dist
 /ahcui
