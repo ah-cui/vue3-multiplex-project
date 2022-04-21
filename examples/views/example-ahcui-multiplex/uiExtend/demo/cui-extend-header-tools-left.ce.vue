@@ -1,7 +1,9 @@
 
 
 <template>
+    <div class="cui-header-tools-inner-left" >
         <el-input v-model="input" placeholder="我是一个扩展的查询输入框" />
+    </div>
 </template>
 
 <script>
@@ -20,6 +22,14 @@ export default {
 </script>
 
 <style>
+.cui-header-tools-inner-left
+{
+    background-color: var(--sidebar-main-background-color);
+    border:1px solid red;
+    width:100%;
+    box-sizing: border-box;
+    height: 100%;
+}
 :root {
     --el-color-white:#ffffff;
     --el-color-black:#000000;

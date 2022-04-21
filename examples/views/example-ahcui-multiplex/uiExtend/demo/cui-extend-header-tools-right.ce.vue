@@ -1,9 +1,11 @@
 
 
 <template>
+    <div class="cui-header-tools-inner-right" >
         <div class="cui-header-tools-item" :title="fullScreen?'还原':'最大化'" @click="fullScreen = Screen.screenSwitch()">
                 <el-icon :size="20"><full-screen v-if="!fullScreen"/><crop v-else /></el-icon>
         </div>
+    </div>
 </template>
 
 <script>
@@ -28,6 +30,14 @@ export default {
 </script>
 
 <style scoped>
+.cui-header-tools-inner-right
+{
+    background-color: var(--sidebar-main-background-color);
+    border:1px solid red;
+    width:100%;
+    box-sizing: border-box;
+    height: 100%;
+}
 .el-icon {
     --color:inherit;
     height:1em;

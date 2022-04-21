@@ -17,6 +17,12 @@
       <div class="dashboard-img" style="font-size:30px">
          <el-button @click="definecuiExtendHeaderToolsRight">自定义头部右侧区域</el-button>
       </div>
+      <div class="dashboard-img" style="font-size:30px">
+         <el-button @click="definecuiExtendSiderbarTop">自定义侧栏头部区域</el-button>
+      </div>
+      <div class="dashboard-img" style="font-size:30px">
+         <el-button @click="definecuiExtendSiderbarBottom">自定义侧栏底部区域</el-button>
+      </div>
 </template>
 
 <script>
@@ -24,6 +30,8 @@ import {vue} from '../../../../assets/core';
 import cuiExtendHeaderLogo from './cui-extend-header-logo.ce.vue';
 import cuiExtendHeaderToolsLeft from './cui-extend-header-tools-left.ce.vue';
 import cuiExtendHeaderToolsRight from './cui-extend-header-tools-right.ce.vue';
+import cuiExtendSiderbarTop from './cui-extend-siderbar-top.ce.vue';
+import cuiExtendSiderbarBottom from './cui-extend-siderbar-bottom.ce.vue';
 
 export default {
     components:{
@@ -55,11 +63,27 @@ export default {
                 customElements.define('cui-extend-header-tools-right', _cuiExtendHeaderToolsRight)
               }
         }
+        const definecuiExtendSiderbarTop=function(){
+              let customElement=customElements.get('cui-extend-siderbar-top');
+              if(!customElement){
+                const _cuiExtendSiderbarTop = vue.defineCustomElement(cuiExtendSiderbarTop)
+                customElements.define('cui-extend-siderbar-top', _cuiExtendSiderbarTop)
+              }
+        }
+        const definecuiExtendSiderbarBottom=function(){
+              let customElement=customElements.get('cui-extend-siderbar-bottom');
+              if(!customElement){
+                const _cuiExtendSiderbarBottom = vue.defineCustomElement(cuiExtendSiderbarBottom)
+                customElements.define('cui-extend-siderbar-bottom', _cuiExtendSiderbarBottom)
+              }
+        }
         
         return {
           definecuiExtendHeaderLogo,
           definecuiExtendHeaderToolsLeft,
-          definecuiExtendHeaderToolsRight
+          definecuiExtendHeaderToolsRight,
+          definecuiExtendSiderbarTop,
+          definecuiExtendSiderbarBottom,
         }
     }
 }

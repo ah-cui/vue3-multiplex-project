@@ -4,19 +4,29 @@
  */
 
 <template>
-    <el-icon :size="40"><burger /></el-icon>
-    <div class="sysName">自定义logo区域</div>
+    <div class="cui-header-inner-logo" v-if="!style.sideBarCollapse">
+        <el-icon :size="40"><burger /></el-icon>
+        <div class="sysName">自定义logo区域</div>
+    </div>
+    <div class="cui-header-inner-logo" v-else>
+        <el-icon :size="40"><burger /></el-icon>
+    </div>
 </template>
 
 <script>
-import {vue,runtimeCfg} from '../../../../assets/core';
+import {vue,runtimeCfg,mixin} from '../../../../assets/core';
 import {Burger} from '@element-plus/icons-vue'
 import {ElIcon} from 'element-plus';
 export default {
     components:{ElIcon,Burger},
     props:{},
     setup() {
+         const {
+            cuiStore_style
+        } = mixin();
+        const style=vue.readonly(cuiStore_style);
         return {
+            style,
             runtimeCfg,
         }
     }
@@ -25,13 +35,14 @@ export default {
 </script>
 
 <style scoped>
-.logo{
-
-}
-.sysName
+.cui-header-inner-logo
 {
-
+    background-color: var(--sidebar-main-background-color);
+    border:1px solid red;
+    width:100%;
+    box-sizing: border-box;
 }
+
 .el-icon {
     --color:inherit;
     height:1em;
