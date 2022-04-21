@@ -1,7 +1,13 @@
 <template>
     <div class="wrapper cui-layout cui-theme  cui-style-theme-color-2">
+        <video loop muted autoplay playsinline poster="/static/img/loginbg.jpg" class="background-video">
+            <source src="/static/video/login_bgvideo.mp4" type="video/mp4">
+        </video>
         <cui-head></cui-head>
-        <canvas class="constellation" width="1920" height="887"></canvas>
+        <div class="video-shadow">
+            <canvas class="constellation" width="1920" height="887"></canvas>
+        </div>
+        
         <div class="ms-login">
             <div class="ms-title">{{runtimeCfg.app_project_name}}</div>
             <el-form label-width="0px" class="loginForm">
@@ -12,13 +18,12 @@
                     <el-input v-model="password" placeholder="请输入密码" clearable type="password"></el-input>
                 </el-form-item>
                 <div class="login-btn">
-                    <el-button type="primary" @click="login">登录</el-button>
+                    <div class="lf">Tips : 用户名/密码任意</div>
+                    <el-button class="rf" type="primary" @click="login">登录</el-button>
+                    
                 </div>
                 <div class="forgotPwd"> </div>
-                <p style="font-size:12px;line-height:30px;color:#999;">
-                  Tips : 用户名/密码:任意<br/>
-                  登录页不具备换肤特性
-                  </p>
+
             </el-form>
         </div>
         <cui-bottom></cui-bottom>
@@ -122,20 +127,17 @@ export default {
   position: relative;
   width: 100%;
   height: 100%;
-  background-image: url(../../static/img/loginbg.jpg);
-  background-repeat: no-repeat;
-  background-size:100% 100%;
 }
 .wrapper .ms-login {
   position: absolute;
-  right: 10%; 
+  left: 50%; 
   top: 30%;
   width: 380px;
-  height: 360px;
+  height: 400px;
   margin: -50px 0 0 -200px;
   border-radius: 5px;
   background: #fff;
-  opacity: 0.8;
+  opacity: 0.93;
 }
 .wrapper .ms-login .ms-title {
   width: 90%;
@@ -162,4 +164,24 @@ export default {
     width: 100%;
     height: 100%;
     }
+.wrapper .video-shadow{
+  position: absolute;
+  top: 0px;
+  width: 100%;;
+  height:100%;
+  background: #000;
+  opacity: 0.3;
+}
+.wrapper .background-video {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  z-index: -100;
+  min-width: 100%;
+  min-height: 100%;
+  width: 100%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
 </style>

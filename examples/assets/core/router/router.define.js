@@ -3,8 +3,17 @@ import ahcuimultiplex from "./router.define.example.ahcuimultiplex";
 import pages from "./router.define.example.pages";
 import {needLogin} from './router.auth';
 
+/**
+ *  这些路由是不使用AhCui框架的路由地址
+ * 
+ * 
+ */
+ const routesUnUseAhCui =  [
 
-const routesDefine = [
+]
+
+
+const routesUseAhCui = [
     
         {
           path: "/dashboard",
@@ -55,4 +64,7 @@ const routesDefine = [
 
 
 
-export default routesDefine;
+      export {
+        routesUnUseAhCui,
+        routesUseAhCui
+      } 

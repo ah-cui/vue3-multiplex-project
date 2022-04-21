@@ -18,7 +18,7 @@
  app
  .use(router)
  .use(store)
- .use(elementPlus, { size: 'small', zIndex: 3000 })
+ .use(elementPlus, { size: 'default ', zIndex: 3000 })
  .mount('#app');
  
  

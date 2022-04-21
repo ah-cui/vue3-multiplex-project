@@ -40,9 +40,9 @@
 
         __app_logo_url__ :'',
     
-        __app_project_name__ :'ahcui框架',
+        __app_project_name__ :'ahcui前端框架',
     
-        __app_page_title__ : "ahcui框架",
+        __app_page_title__ : "ahcui前端框架",
     
         __app_page_keyWords__ : "请输入您想设置的应用关键字",
         
@@ -56,7 +56,7 @@
          * 
          * 
          */
-        __webapi_base_path__ : "/restful/api",
+        __webapi_base_path__ : "/restful/api/",
         
         __page_hid_topbottom__ : false,
         
