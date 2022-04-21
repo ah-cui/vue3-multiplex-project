@@ -64,19 +64,19 @@
 
         __multiplex_console__:{
             debug:{
-                open: true,
+                open: false,
             },
             error:{
-                open: true,
+                open: false,
             },
             info:{
-                ope_: true,
+                ope_: false,
             },
             log:{
-                open: true,
+                open: false,
             },
             warn:{
-                open: true,
+                open: false,
             },
         },
 
