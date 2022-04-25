@@ -49,9 +49,9 @@ npm i
 
 安装完工程依赖项后，即可编译运行工程，工程内部提供了如下指令：
 
-- dev 开发调试指令，项目开发调试使用的项目运行脚本，用于项目开发模式
+- dev 项目开发运行指令，项目开发调试使用的项目运行脚本，用于项目开发模式
 	
-- dev:demo 开发调试指令，示例开发调试使用的运行脚本，用于学习示例运行机制的模式
+- dev:demo 示例开发运行指令，示例开发调试使用的运行脚本，用于学习示例运行机制的模式
 
 - build 编译指令，项目编译部署要用到的编译脚本，用于项目进行部署
 
@@ -482,10 +482,19 @@ import {runtimeCfg} from "src\assets\core\index.js";
 console.log(runtimeCfg.customConfig.c.c1);
 
 ```
+### 3：<a href="example">演示系统的使用</a>
 
-### 3：<a href="IBMS">系统集成</a>
+控制台转到此工程根目录，执行命令即可启动演示系统：
+```
+npm run dev:demo
+```
 
 #### 3.1：<a href="IBMS-scheme">集成方案</a>
+
+
+### 4：<a href="IBMS">系统集成</a>
+
+#### 4.1：<a href="IBMS-scheme">集成方案</a>
 
 文档梳理中
 
