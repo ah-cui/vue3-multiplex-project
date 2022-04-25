@@ -4,11 +4,11 @@
  */
 
 <template>
-    <div class="cui-header-inner-logo" v-if="!style.sideBarCollapse">
+    <div class="cui-header-inner-logo marked_box" v-if="!style.sideBarCollapse">
         <el-icon :size="40"><burger /></el-icon>
-        <div class="sysName">自定义logo区域</div>
+        <div class="sysName">logo区域</div>
     </div>
-    <div class="cui-header-inner-logo" v-else>
+    <div class="cui-header-inner-logo marked_box" v-else>
         <el-icon :size="40"><burger /></el-icon>
     </div>
 </template>
@@ -38,9 +38,10 @@ export default {
 .cui-header-inner-logo
 {
     background-color: var(--sidebar-main-background-color);
-    border:1px solid red;
+
     width:100%;
     box-sizing: border-box;
+    display: inherit;
 }
 
 .el-icon {
@@ -61,5 +62,19 @@ export default {
     height:1em;
     width:1em;
 }
+
+.marked_box{animation: glow 800ms ease-out infinite alternate;     border:1px solid;}
+@keyframes glow {
+    0% {
+        border-color: rgb(0, 245, 0);
+        box-shadow: 0 0 5px rgba(65, 236, 65, 0.2), inset 0 0 5px rgba(3, 109, 3, 0.1), 0 1px 0 rgb(66, 187, 66);
+    }
+    100% {
+        border-color: rgb(228, 18, 18);
+        box-shadow: 0 0 20px rgba(216, 128, 150, 0.6), inset 0 0 10px rgba(139, 4, 56, 0.4), 0 1px 0 rgb(233, 78, 104);
+    }
+}
+
+
 </style>
 

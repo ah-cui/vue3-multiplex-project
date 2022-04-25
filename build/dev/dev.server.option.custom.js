@@ -11,7 +11,7 @@ module.exports =
     hot: true,
     compress: true,
     host: 'localhost',
-    port: 8088, 
+    port: 6088, 
     publicPath: '/',
     proxy: proxyTable,
     quiet: true,

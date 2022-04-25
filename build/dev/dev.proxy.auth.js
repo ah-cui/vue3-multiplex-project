@@ -8,7 +8,7 @@
 
 const DEV = {
   '/restful/api/': {
-      target: 'http://localhost:8088',
+      target: 'http://localhost:6088',
       changeOrigin: true,
       pathRewrite: {
           '^/restful/api/': '/'

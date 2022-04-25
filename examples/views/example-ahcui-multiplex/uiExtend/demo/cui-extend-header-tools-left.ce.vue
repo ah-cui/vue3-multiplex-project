@@ -1,7 +1,7 @@
 
 
 <template>
-    <div class="cui-header-tools-inner-left" >
+    <div class="cui-header-tools-inner-left marked_box" >
         <el-input v-model="input" placeholder="我是一个扩展的查询输入框" />
     </div>
 </template>
@@ -25,7 +25,6 @@ export default {
 .cui-header-tools-inner-left
 {
     background-color: var(--sidebar-main-background-color);
-    border:1px solid red;
     width:100%;
     box-sizing: border-box;
     height: 100%;
@@ -310,6 +309,17 @@ export default {
 }
 .el-input--small .el-input__suffix {
     right:8px
+}
+.marked_box{animation: glow 800ms ease-out infinite alternate;     border:1px solid;}
+@keyframes glow {
+    0% {
+        border-color: rgb(0, 245, 0);
+        box-shadow: 0 0 5px rgba(65, 236, 65, 0.2), inset 0 0 5px rgba(3, 109, 3, 0.1), 0 1px 0 rgb(66, 187, 66);
+    }
+    100% {
+        border-color: rgb(228, 18, 18);
+        box-shadow: 0 0 20px rgba(216, 128, 150, 0.6), inset 0 0 10px rgba(139, 4, 56, 0.4), 0 1px 0 rgb(233, 78, 104);
+    }
 }
 </style>
 
