@@ -5,6 +5,8 @@
 
 @ahcui/vue3-multiplex@1.0.0-rc1
 
+
+
 此项目为模板工程，核心库为[@ahcui/vue3-multiplex](https://www.npmjs.com/package/@ahcui/vue3-multiplex).
 
 ***<font size="1px" color="red">模板工程是一个框架引入的使用示例与编译过程，如果您的动手能力很强，可以不必受限于模板工程给您提供的例子与编译过程，您可以自行创建一个工程与编译过程，同样可以引入前端框架的核心库，但推荐使用提供的模板工程进行项目开发，因为这将减少因不可控因素而导致的支持工作难以衔接问题。</font>***
@@ -489,7 +491,7 @@ console.log(runtimeCfg.customConfig.c.c1);
 npm run dev:demo
 ```
 
-#### 3.1：<a href="IBMS-scheme">集成方案</a>
+#### 3.1：<a href="example"></a>
 
 
 ### 4：<a href="IBMS">系统集成</a>

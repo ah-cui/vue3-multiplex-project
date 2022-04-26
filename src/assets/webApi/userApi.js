@@ -13,8 +13,8 @@ function login(userName,passWord){
             let data=resp.data.data;
             let user={};
             user.userName=data.userName;
-            user.permission=data.resList;
-            user.modules=convertDataToModuleTree(data.resList);
+            user.permission=data;//原始权限数据要保存入user.permission；
+            user.modules=convertDataToModuleTree(data.resList);//转换后的树形数据要放入user.modules
             auth.init(user);
             resolve(user);
         })
