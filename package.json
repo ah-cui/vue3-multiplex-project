@@ -14,12 +14,12 @@
     "build:demo": " node build/demo/webpack.conf.build.js",
     "debug-webpack": "node --inspect-brk build/webpack.dev.conf.js --inline --progress"
   },
-  "bak":{
+  "bak": {
     "@ahcui/vue3-multiplex": "file:ahcui-vue3-multiplex-1.0.0-rc1.tgz"
   },
   "dependencies": {
     "@ahcui/vue-example": "file:examples",
-    "@ahcui/vue3-multiplex": "ahcui@vue3-multiplex@1.0.0-rc2",
+    "@ahcui/vue3-multiplex": "1.0.0-rc2",
     "mockjs": "1.1.0",
     "axios": "0.25.0",
     "element-plus": "2.0.2",

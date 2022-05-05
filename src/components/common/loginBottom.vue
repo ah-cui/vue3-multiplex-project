@@ -1,15 +1,17 @@
 <template>
     <div>
       <div class="bottom">
-            <div class="copyright">
+              <div class="copyright">
                     <p class="bottomlink">Powered by
                       <a href="#" target="_blank">{{version.name}}@{{version.release}}</a>
                       </p>
-                </div>
-        <div class="copyright">
-            <p class="bottomlink">Copyright © 2019 - {{(new Date()).getFullYear()}} @ahcui. All Rights Reserved.</p>
-        </div>
-
+              </div>
+              <div class="copyright">
+                  <p class="bottomlink">Copyright © 2019 - {{(new Date()).getFullYear()}} @ahcui. All Rights Reserved.</p>
+              </div>
+              <div class="hide">
+                  鲁ICP备16031446号-7
+              </div>
         </div>
     </div>
 </template>

@@ -64,19 +64,19 @@
 
         __multiplex_console__:{
             debug:{
-                open: false,
+                open: true,
             },
             error:{
-                open: false,
+                open: true,
             },
             info:{
-                ope_: false,
+                ope_: true,
             },
             log:{
-                open: false,
+                open: true,
             },
             warn:{
-                open: false,
+                open: true,
             },
         },
 
@@ -104,7 +104,7 @@
              * cui-style-theme-header-color
              * 
              */
-            headerBarClassName: 'cui-style-theme-header-dark',
+            headerBarClassName: 'cui-style-theme-header-color',
 
             /**
              * 界面风格名称
@@ -139,7 +139,7 @@
              * 内容区域铺满模式
              * 如启用，则自动增加样式名：cui-style-layout-bodybespread
              */
-            bodyBespread: false,
+            bodyBespread: true,
 
             /**
                 * 是否固定顶栏区域
@@ -157,7 +157,7 @@
                 * 是否固定主体区域
                 * 如启用，则自动增加样式名：cui-style-layout-fixedbody
                 */
-            fixedBody: false,
+            fixedBody: true,
 
             /**
                 * logo宽度自动
@@ -212,7 +212,7 @@
                     sideBarMainMenuDoubleHeight:50,
                     sideBarMainMenuDoubleIconSize:18,
                     sideBarMainMenuItemHeight:50,
-                    sideBarMainMenuItemIconTextMargin:4,
+                    sideBarMainMenuItemIconTextMargin:10,
                     sideBarMainMenuItemIconSize:14,
                     sideBarMainMenuItemFontSize:14
                 },
@@ -223,8 +223,8 @@
                         {icon:"fa fa-cog",label:"主题设置",event:"styleSetting",divided:false},
                         {icon:"fa fa-sign-out",label:"退出登录",event:"logout",divided:true}
                     ],
-                    headerHeight:48,
-                    headerMenuItemPadding:20,
+                    headerHeight:60,
+                    headerMenuItemPadding:30,
                 }
             }
         },
@@ -276,7 +276,7 @@
                     /*工作区多页面 */
                     "1005040":{show:true},
                     /*logo宽度自动 */
-                    "1005050":{show:false},
+                    "1005050":{show:true},
                     /*菜单图标彩色 */
                     "1005060":{show:true},
                     /*加载动画模式 */
