@@ -3,7 +3,7 @@
       <div class="bottom">
               <div class="copyright">
                     <p class="bottomlink">Powered by
-                      <a href="#" target="_blank">{{version.name}}@{{version.release}}</a>
+                      <a href="https://www.npmjs.com/package/@ahcui/vue3-multiplex" target="_blank">{{version.name}}@{{version.release}}</a>
                       </p>
               </div>
               <div class="copyright">
