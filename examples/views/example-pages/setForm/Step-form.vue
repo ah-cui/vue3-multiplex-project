@@ -220,7 +220,7 @@
 		margin-bottom: 15px;
 	}
 
-	.input-with-select ::v-deep .el-select .el-input {
+	.input-with-select :v-deep(.el-select .el-input) {
 		width: 100px;
 	}
 

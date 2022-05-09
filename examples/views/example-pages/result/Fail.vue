@@ -46,7 +46,7 @@
 	}
 
 	@media screen and (max-width: 768px) {
-		.ele-body ::v-deep .ele-result-extra {
+		.ele-body :v-deep(.ele-result-extra) {
 			padding-left: 18px;
 			padding-right: 18px;
 		}

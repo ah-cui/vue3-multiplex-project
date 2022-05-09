@@ -67,10 +67,7 @@ const webpackConfig = merge(baseWebpackConfig, {
                         from: path.resolve(__dirname, '../../static'),
                         to: prodBuildConfig.assetsSubDirectory,
                     },
-                    {
-                        from: path.resolve(__dirname, '../../apidata'),
-                        to: prodBuildConfig.assetsApiDataDirectory,
-                    }
+                    
                 ],
                 options: {
                     concurrency: 50
@@ -88,13 +85,22 @@ const webpackConfig = merge(baseWebpackConfig, {
                     ecma: undefined,
                     warnings: false,
                     parse: {},
+                    sourceMap:prodBuildConfig.productionSourceMap ? prodBuildConfig.devtool : false,
                     compress: {
                         drop_console: false,
                         drop_debugger: false,
                         pure_funcs: ['console.log'], // 移除console
-                    }
+                    },
+                    output: {
+                        comments: false,
+                        inline_script:true,
+                    },
                 },
-            })
+            },
+            {
+                extractComments: false,//是否分离注释到单独文件
+            }
+            )
         ],
         splitChunks: {
             // 分离异步代码（import()） initial 同步代码  all 所有

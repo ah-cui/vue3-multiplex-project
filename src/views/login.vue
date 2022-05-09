@@ -23,8 +23,16 @@
                     
                 </div>
                 <div class="forgotPwd"> </div>
-
+               
             </el-form>
+             <div class="source clearfix">
+               <a href="https://gitee.com/ahcui/vue3-multiplex-project" target="_blank">
+                  <img src="https://assets.gitee.com/assets/favicon-9007bd527d8a7851c8330e783151df58.ico" title="访问gitee上的此项目" alt="访问gitee上的此项目"/>
+                </a>
+                <a href="https://www.npmjs.com/package/@ahcui/vue3-multiplex" target="_blank">
+                  <img src="https://static.npmjs.com/f1786e9b7cba9753ca7b9c40e8b98f67.png" title="访问NPM上的相关内容" alt="访问NPM上的相关内容"/>
+                </a>
+              </div>
         </div>
         <cui-bottom></cui-bottom>
     </div>
@@ -183,5 +191,18 @@ export default {
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+}
+.wrapper .ms-login .source
+{
+    display: block;
+    position: relative;
+    width: 100%;
+    top: 130px;
+    bottom: 10px;
+    text-align: center;
+}
+.wrapper .ms-login .source img{
+    margin: 0px 10px;
+    width:30px;
 }
 </style>

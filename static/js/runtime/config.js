@@ -70,7 +70,7 @@
                 open: true,
             },
             info:{
-                ope_: true,
+                open: true,
             },
             log:{
                 open: true,

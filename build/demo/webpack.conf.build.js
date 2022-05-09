@@ -7,19 +7,37 @@ const utils = require('../utils')
 const chalk = require('chalk');
 const webpack = require('webpack')
 const prodBuildConfig = require('../prod/prod.conf.js');
+const CopyPlugin = require('copy-webpack-plugin');
 const { merge } = require('webpack-merge');
 const prodWebpackConfig = require('../prod/webpack.conf')
 
 const spinner = ora('building for production...');
 
 spinner.start();
-rm(path.join(prodBuildConfig.assetsRoot, prodBuildConfig.assetsSubDirectory), err => {
+rm(path.join(prodBuildConfig.assetsRoot), err => {
     if (err) throw err;
     webpack(
         merge(prodWebpackConfig, {
             entry: {
-            app: ['./examples/main.js']
+                app:  ['./examples/main.js']
             },
+            plugins:[
+                new CopyPlugin(
+                    {
+                        patterns:
+                        [
+                            {
+                                from: path.resolve(__dirname, '../../apidata'),
+                                to: prodBuildConfig.assetsApiDataDirectory,
+                            },
+                            {
+                                from: path.resolve(__dirname, '../../examples/static'),
+                                to: 'examples/static',
+                            },
+                        ]
+                    }
+                )
+            ]
         }
       ), (err, stats) => {
         spinner.stop();
