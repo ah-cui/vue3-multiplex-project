@@ -7,8 +7,7 @@ export default {
      * @param {Func(data)} succCallback 
      * @param {Func(err)} failedCallback 
      */
-    getFileByFilepath(succCallback,failedCallback){
-        let url=runtimeCfg.webapi_base_path+"README.md";//此地址在build\dev\dev.proxy.js进行了代理，会地址重写"
+    getFileByFilepath(url,succCallback,failedCallback){
         axios.get(url).then(resp=>{
             if (resp && resp.data) 
             {

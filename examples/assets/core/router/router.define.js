@@ -1,7 +1,8 @@
 
-import ahcuimultiplex from "./router.define.example.ahcuimultiplex";
+
+import components from "./router.define.components";
+import ahcui from "./router.define.example.ahcui";
 import pages from "./router.define.example.pages";
-//import helps from "./router.define.example.helps";
 import {needLogin} from './router.auth';
 
 /**
@@ -40,22 +41,21 @@ const routesUseAhCui = [
           component:()=>import("../../../views/Dashboard.vue"),
           meta: { title: "监控页", permission: needLogin }
         },
-        
-    
+
+        /**
+         * Element-UI组件晋级用法
+         */
+        ...components,
+
         /**
          * @ahcui/vue3-multiplex api接口调用示例
          */
-        ...ahcuimultiplex,
+        ...ahcui,
         
         /**
          * 示例页面
          */
         ...pages,
-
-        /**
-         * 帮助文档
-         */
-        //...helps,
         
         
         {

@@ -203,49 +203,56 @@
                 "resId": "FDDFFF8CE6GSSDDAFRRC379DFS1123FQ",
                 "resName": "框架二开",
                 "iconClass": "fa fa-thumbs-o-up",
-                "resPath": "/ahcui-multiplex-api/index"
+                "resPath": "/ahcui-sdk/index"
             },
             {
                 "resId": "S5FDD8SS6GYCDFSSAWC37911DFWQDFDA",
                 "resPid": "FDDFFF8CE6GSSDDAFRRC379DFS1123FQ",
                 "resName": "API使用",
                 "iconClass": "fa fa-bomb",
-                "resPath": "/ahcui-multiplex-api/header"
+                "resPath": "/ahcui-sdk/ahcui-api/index"
+            },
+            {
+                "resId": "SE3WWSFFWF56FFAGFDSAFDEEFFGH8S",
+                "resPid": "S5FDD8SS6GYCDFSSAWC37911DFWQDFDA",
+                "resName": "API定义",
+                "iconClass": "fa fa-bomb",
+                "resPath": "/ahcui-sdk/ahcui-api/define"
             },
             {
                 "resId": "SE3456YFGYCDFSDFF56DFWQFGBG0PDSA",
                 "resPid": "S5FDD8SS6GYCDFSSAWC37911DFWQDFDA",
                 "resName": "头部操作API",
                 "iconClass": "fa fa-bomb",
-                "resPath": "/ahcui-multiplex-api/header"
+                "resPath": "/ahcui-sdk/ahcui-api/header"
             },
             {
                 "resId": "DFR5DH69S6GHFSSAWC37911JUC341D2S",
                 "resPid": "S5FDD8SS6GYCDFSSAWC37911DFWQDFDA",
                 "resName": "工作区API",
                 "iconClass": "fa fa-bomb",
-                "resPath": "/ahcui-multiplex-api/content"
+                "resPath": "/ahcui-sdk/ahcui-api/content"
             },
             {
                 "resId": "S34VYCDFSSGNM9911DDCD4FSCDHYILSE",
                 "resPid": "FDDFFF8CE6GSSDDAFRRC379DFS1123FQ",
                 "resName": "UI扩展",
                 "iconClass": "fa fa-coffee",
-                "resPath": "/ahcui-multiplex-ui-extend/index"
+                "resPath": "/ahcui-sdk/ahcui-ui-extend/index"
             },
             {
                 "resId": "SDSSVSGFGNMGFG1DDGEWFJHDHJHG89SS",
                 "resPid": "S34VYCDFSSGNM9911DDCD4FSCDHYILSE",
                 "resName": "扩展坞",
                 "iconClass": "fa fa-crosshairs",
-                "resPath": "/ahcui-multiplex-ui-extend/dock"
+                "resPath": "/ahcui-sdk/ahcui-ui-extend/dock"
             },
             {
                 "resId": "ASSVB6CGFDJLTYNMTB1DD84FSCFSSCVE",
                 "resPid": "S34VYCDFSSGNM9911DDCD4FSCDHYILSE",
                 "resName": "扩展演示",
                 "iconClass": "fa fa-crosshairs",
-                "resPath": "/ahcui-multiplex-ui-extend/demo"
+                "resPath": "/ahcui-sdk/ahcui-ui-extend/demo"
             },
             
             {
@@ -253,28 +260,28 @@
                 "resPid": "FDDFFF8CE6GSSDDAFRRC379DFS1123FQ",
                 "resName": "Event监听",
                 "iconClass": "fa fa-deaf",
-                "resPath": "/ahcui-multiplex-event/index"
+                "resPath": "/ahcui-sdk/ahcui-event/index"
             },
             {
                 "resId": "SDBFS1FDFRGHBHHH89LDKLGSFGFFE4CV",
                 "resPid": "SDE6BFS11DDCD4FSFGJ89LD4FGSCV6LI",
                 "resName": "事件定义",
                 "iconClass": "fa fa-hand-rock-o",
-                "resPath": "/ahcui-multiplex-event/define"
+                "resPath": "/ahcui-sdk/ahcui-event/define"
             },
             {
                 "resId": "SFEG4FSFGJFGGBH8FDGFD6AFV21FL0XS",
                 "resPid": "SDE6BFS11DDCD4FSFGJ89LD4FGSCV6LI",
                 "resName": "事件订阅",
                 "iconClass": "fa fa-snowflake-o",
-                "resPath": "/ahcui-multiplex-event/listen"
+                "resPath": "/ahcui-sdk/ahcui-event/listen"
             },
             {
                 "resId": "SDEFM991FFRT6FSRTREDFSBNL9L0GSD",
                 "resPid": "FDDFFF8CE6GSSDDAFRRC379DFS1123FQ",
                 "resName": "UI主题色",
                 "iconClass": "fa fa-th-large",
-                "resPath": "/ahcui-multiplex-ui/element-plus/themetest"
+                "resPath": "/ahcui-ui/element-plus/themetest"
             },
             {
                 "resId": "9B45A7D8C37A4CA7BD46C285612318E3",

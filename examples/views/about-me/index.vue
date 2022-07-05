@@ -1,17 +1,13 @@
 <template>
-	<el-container class="el-container-scoped">
-		<el-main ref="main" class="el-main-scoped">
-			<el-card shadow="never" class="el-card-scoped">
+	<el-container >
+			<el-card shadow="never" class="el-card-scoped vs-workbench-scoped">
         		
-			
-				<el-container>
-					<el-main class="el-main-scoped">
+					
 						<div class="fileresource">本内容来自于根目录的readme.md</div>
-						 <markdown-it-vue class="md-body-scoped" :content="readme_content"/>
-					</el-main>
-				</el-container>
+						 <!--<markdown-it-vue class="md-body-scoped" :content="readme_content"/>-->
+						 <markdown-it :plugins="plugins" class="md-body-scoped" :source="readme_content"/>
+					
 			</el-card>
-		</el-main>
 	</el-container>
 </template>
 
@@ -23,27 +19,75 @@
 
 
 import readfile from '../../assets/webApi/readfile.js';
-import MarkdownItVue from 'markdown-it-vue'
-import 'markdown-it-vue/dist/markdown-it-vue.css'
-import{ref} from 'vue';
+import MarkdownIt from 'vue3-markdown-it';
+import markdownItabbr from 'markdown-it-abbr'
+import markdownItanchor from 'markdown-it-anchor'
+import markdownItdeflist from 'markdown-it-deflist'
+import markdownItemoji from 'markdown-it-emoji'
+import markdownItfootnote from 'markdown-it-footnote'
+import markdownIthighlightjs from 'markdown-it-highlightjs'
+import markdownItins from 'markdown-it-ins'
+import markdownItmark from 'markdown-it-mark'
+import markdownItsub from 'markdown-it-sub'
+import markdownItsup from 'markdown-it-sup'
+import markdownIttasklists from 'markdown-it-task-lists'
+import markdownIttocdoneright from 'markdown-it-toc-done-right'
+import 'highlight.js/styles/monokai.css';
+import {vue} from '../../assets/core';;
 
 export default {
 	name: "ReadMe-index",
 	components: {
-		MarkdownItVue,
+		MarkdownIt,
 	},
 	setup(){
 
-		const readmepath=ref("/README.md"),loading=ref(false),readme_content=ref("");
-
+		let filepath=vue.ref("/README.md"),readme_content=vue.ref("");
+		const plugins=vue.reactive([
+			{
+				plugin:markdownItabbr
+			},
+			{
+				plugin:markdownItanchor
+			},
+			{
+				plugin:markdownItdeflist
+			},
+			{
+				plugin:markdownItemoji
+			},
+			{
+				plugin:markdownItfootnote
+			},
+			{
+				plugin:markdownIthighlightjs
+			},
+			{
+				plugin:markdownItins
+			},
+			{
+				plugin:markdownItmark
+			},
+			{
+				plugin:markdownItsub
+			},
+			{
+				plugin:markdownItsup
+			},
+			{
+				plugin:markdownIttasklists
+			},
+			{
+				plugin:markdownIttocdoneright
+			}
+		])
 		const getReadMe=()=>{
-			loading.value=true;
+			let readmepath=filepath;
 			readfile.getFileByFilepath(readmepath.value,resp=>{
 					readme_content.value=resp;
-					_loading.value=false;
 					
 			},err=>{
-					loading.value=false;
+				console.log(err.message)
 			})
 		}
 		vue.onMounted(()=>{
@@ -51,9 +95,8 @@ export default {
 		})
 
 		return {
-		filepath,
-		loading,
-		readme_content,
+			readme_content,
+			plugins,
 		}
 	}
 }

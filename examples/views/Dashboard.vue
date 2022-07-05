@@ -1,51 +1,51 @@
 <template style="background-color: rgb(242,242,242);">
-	<div class="dashboard" style="width: calc(100%-15px); height: calc(100%-15px);margin: 15px;">
+	<div class="dashboard" style="width: calc(100%-15px); height: calc(100%-15px); margin:15px">
 		<div class="container01">
 			<div class="container01-aside-left">
 				<div class="aside-header">
-					<div class="header">
+					<el-card class="header">
 						<div style="padding-left: 5%;">
 							<img src="/examples/static/dashboardImg/header01.png">
 						</div>
 						<div style="padding-right: 5%;">
-							<p style="font-size: 20px;font-weight: bold;padding-left: 30%;color: rgba(0,0,0,0.7);">190
+							<p style="font-size: 20px;font-weight: bold;padding-left: 30%;color: #666;">190
 							</p>
 							<p style="font-size: 14px;color: gray;">活动任务</p>
 						</div>
-					</div>
-					<div class="header">
+					</el-card>
+					<el-card class="header">
 						<div style="padding-left: 5%;">
 							<img src="/examples/static/dashboardImg/header02.png">
 						</div>
 						<div style="padding-right: 5%;">
-							<p style="font-size: 20px;font-weight: bold;padding-left: 5%;color: rgba(0,0,0,0.7);">62</p>
+							<p style="font-size: 20px;font-weight: bold;padding-left: 5%;color: #666;">62</p>
 							<p style="font-size: 14px;color: gray;">项目</p>
 						</div>
-					</div>
-					<div class="header">
+					</el-card>
+					<el-card class="header">
 						<div style="padding-left: 5%;">
 							<img src="/examples/static/dashboardImg/header03.png">
 						</div>
 						<div style="padding-right: 5%;">
-							<p style="font-size: 20px;font-weight: bold;color: rgba(0,0,0,0.7);">14</p>
+							<p style="font-size: 20px;font-weight: bold;color: #666;">14</p>
 							<p style="font-size: 14px;color: gray;">团队</p>
 						</div>
-					</div>
-					<div class="header">
+					</el-card>
+					<el-card class="header">
 						<div style="padding-left: 5%;">
 							<img src="/examples/static/dashboardImg/money.png">
 						</div>
 						<div style="padding-right: 5%;">
-							<p style="font-size: 20px;font-weight: bold;color: rgba(0,0,0,0.7);">15562元</p>
+							<p style="font-size: 20px;font-weight: bold;color: #666;">15562元</p>
 							<p style="font-size: 14px;color: gray;padding-left: 64%;">预算</p>
 						</div>
-					</div>
+					</el-card>
 				</div>
 				<div class="aside-article">
-					<div class="article1">
-						<div style="display: flex;justify-content: space-between;align-items: center;margin: 15px;">
+					<el-card class="article1">
+						<div style="display: flex;justify-content: space-between;align-items: center;">
 							<div>
-								<p style="font-size: 16px;font-weight: bold;color: rgba(0,0,0,0.7);">进度条</p>
+								<p style="font-size: 16px;font-weight: bold;color: #666;">进度条</p>
 								<p style="font-size: 14px;color: gray;">最近一个月概览</p>
 							</div>
 							<div>
@@ -55,12 +55,11 @@
 							</div>
 						</div>
 						<div style="display: flex;justify-content: space-between;align-items: center;margin: 15px;">
-							<div
-								style="width: 50px; height: 50px;background-color: rgb(228,255,244);display: flex;justify-content: center;align-items: center;">
+							<div style="width: 50px; height: 50px;background-color: rgb(228,255,244);display: flex;justify-content: center;align-items: center;">
 								<img src="/examples/static/dashboardImg/topwrite.png">
 							</div>
 							<div style="width: 25%;margin-left: -30px;">
-								<p style="font-size: 15px; font-weight: bold;color: rgba(0,0,0,0.7);">顶级作者</p>
+								<p style="font-size: 15px; font-weight: bold;color: #666;">顶级作者</p>
 								<p style="font-size: 12px;color: gray;">HTML/CSS/JS/Python</p>
 							</div>
 							<div style="width: 30%;">
@@ -77,7 +76,7 @@
 								<img src="/examples/static/dashboardImg/hotwrite.png">
 							</div>
 							<div style="width: 25%;margin-left: -30px;">
-								<p style="font-size: 15px; font-weight: bold;color: rgba(0,0,0,0.7);">热门作家</p>
+								<p style="font-size: 15px; font-weight: bold;color: #666;">热门作家</p>
 								<p style="font-size: 12px;color: gray;">HTML/Vue/JS/Laravel</p>
 							</div>
 							<div style="width: 30%;">
@@ -94,7 +93,7 @@
 								<img src="/examples/static/dashboardImg/newpdt.png">
 							</div>
 							<div style="width: 25%;margin-left: -30px;">
-								<p style="font-size: 15px; font-weight: bold;color: rgba(0,0,0,0.7);">新产品</p>
+								<p style="font-size: 15px; font-weight: bold;color: #666;">新产品</p>
 								<p style="font-size: 12px;color: gray;">HTML/CSS/Python/Java</p>
 							</div>
 							<div style="width: 30%;">
@@ -122,15 +121,15 @@
 								<el-button type="primary" plain style="width: 25px;">→</el-button>
 							</div>
 						</div>
-					</div>
-					<div class="article2">
-						<div style="margin: 15px;">
-							<p style="font-size: 16px;font-weight: bold;color: rgba(0,0,0,0.7);">饼状图</p>
+					</el-card>
+					<el-card class="article2">
+						<div style="">
+							<p style="font-size: 16px;font-weight: bold;color: #666;">饼状图</p>
 							<p style="font-size: 14px;color: gray;">85,5574元</p>
 						</div>
 						<div style="display: flex;justify-content: flex-start;align-items: flex-start;">
-							<div style="width: 60%;">
-								<div id="charsA" ref="chart" class="chartsA">
+							<div style="width: 60%;" class="chartsAWarpper">
+								<div id="chartsA" ref="chart" class="chartsA">
 
 								</div>
 							</div>
@@ -141,7 +140,7 @@
 									</div>
 									<div>
 										<p
-											style="font-size: 14px; font-weight: bold;color: rgba(0,0,0,0.7);text-align: left;">
+											style="font-size: 14px; font-weight: bold;color: #666;text-align: left;">
 											人花SaaS</p>
 										<p style="font-size: 12px;color: gray;margin-top: 5px;">人力资源解决方案</p>
 									</div>
@@ -153,7 +152,7 @@
 									</div>
 									<div>
 										<p
-											style="font-size: 14px; font-weight: bold;color: rgba(0,0,0,0.7);text-align: left;">
+											style="font-size: 14px; font-weight: bold;color: #666;text-align: left;">
 											建筑工作室</p>
 										<p style="font-size: 12px;color: gray;margin-top: 5px;">人力资源解决方案</p>
 									</div>
@@ -165,7 +164,7 @@
 									</div>
 									<div>
 										<p
-											style="font-size: 14px; font-weight: bold;color: rgba(0,0,0,0.7);text-align: left;">
+											style="font-size: 14px; font-weight: bold;color: #666;text-align: left;">
 											狡猾的解决</p>
 										<p style="font-size: 12px;color: gray;margin-top: 5px;">人力资源解决方案</p>
 									</div>
@@ -177,19 +176,19 @@
 									</div>
 									<div>
 										<p
-											style="font-size: 14px; font-weight: bold;color: rgba(0,0,0,0.7);text-align: left;">
+											style="font-size: 14px; font-weight: bold;color: #666;text-align: left;">
 											我的流量</p>
 										<p style="font-size: 12px;color: gray;margin-top: 5px;">人力资源解决方案</p>
 									</div>
 								</el-button>
 							</div>
 						</div>
-					</div>
+					</el-card>
 				</div>
 			</div>
-			<div class="container01-aside-right">
-				<div style="margin: 15px;margin-bottom: 25px;">
-					<p style="font-size: 16px;font-weight: bold;color: rgba(0,0,0,0.7);">新客户</p>
+			<el-card class="container01-aside-right">
+				<div style="margin-bottom: 25px;">
+					<p style="font-size: 16px;font-weight: bold;color: #666;">新客户</p>
 				</div>
 				<div
 					style="display: flex;justify-content: space-between;align-items: center;margin: 15px;border-bottom: 1px solid rgb(218,223,227);padding-bottom: 10px;">
@@ -198,9 +197,8 @@
 					</div>
 					<div style="width: 60%;margin-left: 0px;">
 						<div style="display: flex;justify-content: flex-start;align-items: center;">
-							<p style="font-size: 15px; font-weight: bold;width: 80px;color: rgba(0,0,0,0.7);">罗伊桑德斯</p>
-							<p
-								style="width: 35px; height: 15px; background-color: rgb(254,226,222);color: rgb(250,138,124);text-align: center;line-height: 15px;">
+							<p style="font-size: 15px; font-weight: bold;width: 80px;color: #666;">罗伊桑德斯</p>
+							<p style="width: 35px; height: 15px; background-color: rgb(254,226,222);color: rgb(250,138,124);text-align: center;line-height: 15px;">
 								中国</p>
 						</div>
 						<p style="font-size: 14px;color: gray;">脸书CEO</p>
@@ -219,7 +217,7 @@
 					</div>
 					<div style="width: 60%;margin-left: 0px;">
 						<div style="display: flex;justify-content: flex-start;align-items: center;">
-							<p style="font-size: 15px; font-weight: bold;width: 40px;color: rgba(0,0,0,0.7);">马云</p>
+							<p style="font-size: 15px; font-weight: bold;width: 40px;color: #666;">马云</p>
 							<p
 								style="width: 35px; height: 15px; background-color: rgb(214,245,255);color: rgb(109,211,253);text-align: center;line-height: 15px;">
 								中国</p>
@@ -240,7 +238,7 @@
 					</div>
 					<div style="width: 60%;margin-left: 0px;">
 						<div style="display: flex;justify-content: flex-start;align-items: center;">
-							<p style="font-size: 15px; font-weight: bold;width: 55px;color: rgba(0,0,0,0.7);">马化腾</p>
+							<p style="font-size: 15px; font-weight: bold;width: 55px;color: #666;">马化腾</p>
 							<p
 								style="width: 35px; height: 15px; background-color: rgb(253,218,232);color: rgb(255,132,181);text-align: center;line-height: 15px;">
 								中国</p>
@@ -261,7 +259,7 @@
 					</div>
 					<div style="width: 60%;margin-left: 0px;">
 						<div style="display: flex;justify-content: flex-start;align-items: center;">
-							<p style="font-size: 15px; font-weight: bold;width: 55px;color: rgba(0,0,0,0.7);">马斯克</p>
+							<p style="font-size: 15px; font-weight: bold;width: 55px;color: #666;">马斯克</p>
 							<p
 								style="width: 35px; height: 15px; background-color: rgb(223,246,235);color: rgb(135,239,197);text-align: center;line-height: 15px;">
 								中国</p>
@@ -281,7 +279,7 @@
 					</div>
 					<div style="width: 60%;margin-left: 0px;">
 						<div style="display: flex;justify-content: flex-start;align-items: center;">
-							<p style="font-size: 15px; font-weight: bold;width: 70px;color: rgba(0,0,0,0.7);">扎克伯格</p>
+							<p style="font-size: 15px; font-weight: bold;width: 70px;color: #666;">扎克伯格</p>
 							<p
 								style="width: 35px; height: 15px; background-color: rgb(228,223,247);color: rgb(165,149,232);text-align: center;line-height: 15px;">
 								中国</p>
@@ -295,13 +293,12 @@
 						</el-button>
 					</div>
 				</div>
-			</div>
+			</el-card>
 		</div>
-		<div class="container02">
-			<div
-				style="display: flex;justify-content: space-between;align-items: center;margin: 15px;padding-top: 10px;">
+		<el-card class="container02">
+			<div style="display: flex;justify-content: space-between;align-items: center;">
 				<div>
-					<p style="font-size: 16px;font-weight: bold;color: rgba(0,0,0,0.7);">本月项目</p>
+					<p style="font-size: 16px;font-weight: bold;color: #666;">本月项目</p>
 					<p style="font-size: 14px;color: gray;">最近一个月概览</p>
 				</div>
 				<div>
@@ -344,10 +341,15 @@
 				<el-table-column prop="week" label="周" width="200" align="center" />
 				<el-table-column prop="money" label="预算" align="center" />
 			</el-table>
-		</div>
+		</el-card>
 	</div>
 </template>
 <script setup>
+/**
+ * 本页面的Echarts图经过优化，可以响应窗口大小变化后自动调整
+ * 
+ * 
+ */
 	import {
 		ref,
 		reactive,
@@ -356,7 +358,8 @@
 	import * as echarts from 'echarts/core';
 	import {
 		TooltipComponent,
-		LegendComponent
+		LegendComponent,
+		GridComponent 
 	} from 'echarts/components';
 	import {
 		PieChart
@@ -370,6 +373,7 @@
 	echarts.use([
 		TooltipComponent,
 		LegendComponent,
+		GridComponent,
 		PieChart,
 		CanvasRenderer,
 		LabelLayout
@@ -380,20 +384,30 @@
 	})
 
 	function init() {
-		var myChart = echarts.init(document.querySelector('.dashboard .chartsA'));
+		let chartsAWarpper=document.querySelector(".dashboard .chartsAWarpper");
+		let chartsA=document.querySelector('.dashboard .chartsA');
+		var myChart = echarts.init(chartsA
+		,'default',
+		{
+			width: chartsAWarpper.clientWidth,
+			height: chartsAWarpper.clientHeight,
+		});
 		var option = {
 			tooltip: {
 				trigger: 'item'
 			},
 			legend: {
-				left: '40px',
+				left: 'center',
 				top: 'bottom',
+			},
+			grid:{
+				left:"center",
 			},
 			series: [{
 				name: '饼状图',
 				type: 'pie',
 				radius: ['40%', '70%'],
-				center: ['140px', '40%'],
+				center:['50%','50%'],
 				avoidLabelOverlap: false,
 				itemStyle: {
 					borderRadius: 10,
@@ -430,8 +444,24 @@
 			}]
 		};
 		option && myChart.setOption(option);
+		window.onresize=function(){
+			//let chartsAWarpper=document.querySelector(".dashboard .chartsAWarpper");
+			if(chartsAWarpper.clientWidth==0||chartsAWarpper.clientHeight==0){
+				return;
+			}
+			 myChart.resize(
+			{
+				width: chartsAWarpper.clientWidth,
+				height: chartsAWarpper.clientHeight,
+				silent: false,
+				animation: {
+					duration: 1
+					//easing?: string
+				}
+			})
+        };
+		
 	}
-
 	const value = ref('Option3')
 	const options = [{
 			value: 'Option1',
@@ -457,7 +487,7 @@
 	const tableData = [{
 			imgUrl: '/examples/static/dashboardImg/user01.png',
 			rankfirst: "陈凯",
-			ranksecond: "chenkaikai@ahcui.com.cn",
+			ranksecond: "chenkaikai@ahcui.com",
 			pdt: '云平台',
 			team: ['/examples/static/dashboardImg/user03.png', '/examples/static/dashboardImg/user04.png',
 				'/examples/static/dashboardImg/user01.png'
@@ -469,7 +499,7 @@
 		{
 			imgUrl: '/examples/static/dashboardImg/user02.png',
 			rankfirst: "张恒",
-			ranksecond: "zhangheng@ahcui.com.cn",
+			ranksecond: "zhangheng@ahcui.com",
 			pdt: 'ahcui框架',
 			team: ['/examples/static/dashboardImg/user03.png', '/examples/static/dashboardImg/user04.png'],
 			point: "/examples/static/dashboardImg/point02.png",
@@ -479,8 +509,8 @@
 		{
 			imgUrl: '/examples/static/dashboardImg/td.png',
 			rankfirst: "陈薇",
-			ranksecond: "chenweiwe@ahcui.com.cn",
-			pdt: 'ahcui核心库',
+			ranksecond: "chenweiwe@ahcui.com",
+			pdt: 'vsai',
 			team: ['/examples/static/dashboardImg/user03.png', '/examples/static/dashboardImg/user04.png',
 				'/examples/static/dashboardImg/user05.png'
 			],
@@ -507,7 +537,7 @@
 	.container02 {
 		width: 100%;
 		height: 361px;
-		background-color: white;
+		/*background-color: white;*/
 	}
 
 	.container01-aside-left {
@@ -519,7 +549,7 @@
 	.container01-aside-right {
 		width: 26%;
 		height: 445px;
-		background-color: white;
+		/*background-color: white;*/
 	}
 
 	.aside-header {
@@ -540,7 +570,7 @@
 	.header {
 		width: 24.1%;
 		height: 87px;
-		background-color: white;
+		/*background-color: white;*/
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
@@ -550,7 +580,7 @@
 	.article2 {
 		width: 49.4%;
 		height: 342px;
-		background-color: white;
+		/*background-color: white;*/
 	}
 
 	.teamg {
@@ -558,9 +588,18 @@
 		height: 44px;
 		margin-left: -20px;
 	}
+.chartsAWarpper{
+	height: 250px;
+	width:60%;
+}
+.chartsAWarpper .chartsA{
+	height:100%;
+	width:100%;
+}
 
-	.chartsA {
-		width: 300px;
-		height: 250px;
-	}
+  *>>> .header .el-card__body{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
 </style>
