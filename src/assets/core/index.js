@@ -6,6 +6,7 @@ import router from './router';
 import { eventDefine, eventBus,} from './event';
 import mock from './mock';
 import auth from "./auth/index.js";
+import "./style/index.css";
 
 process.env.NODE_ENV === 'production'?__webpack_public_path__ = runtimeCfg.app_public_path:undefined;
 

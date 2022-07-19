@@ -1,0 +1,15 @@
+/**********************************************************************************************************************************
+
+                此文件处理@ahcui体系下的组件在@ahcui/vue3-multiplex-project项目下的样式适配。
+
+
+
+
+***********************************************************************************************************************************/
+
+
+/*此样式用来处理多页面模式时工作区使用@ahcui/vue3-components-url-loader组件加载页面的样式*/
+.cui-multiplex .cui-layout .cui-content .cui-content-body .multipage .el-tabs-scoped > .el-tabs__content .el-tab-pane[aria-labelledby*="tab-/loadpage?url"] .cui-content-view-scoped
+{
+  height: 100%;
+}

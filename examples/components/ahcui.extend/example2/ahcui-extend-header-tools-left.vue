@@ -1,7 +1,8 @@
 
 
 <template>
-        <teleport to=".cui-multiplex .cui-header .cui-header-other cui-extend-header-tools-left">
+    <div v-if="isInCui">
+        <teleport :to="domSelect">
             <el-tooltip effect="dark" content='' placement="bottom">
                 <template #content>
                     <p>这是@ahcui/vue3-multiplex@1.0.0-rc1之后版本提供的UI扩展坞，扩展坞是以"cui-extend"开头的html标签，您可以使用样式选择器查询到扩展坞</p>
@@ -13,6 +14,7 @@
                 <el-input v-model="input" placeholder="我是一个扩展的查询输入框" />
             </el-tooltip>
         </teleport>
+    </div>
 </template>
 
 <script>
@@ -22,9 +24,22 @@ export default {
     components:{ElInput,ElTooltip},
     props:{},
     setup() {
-        let input=vue.ref("");
+        let input=vue.ref(""),_isInCui=vue.ref(false),domSelect=".cui-multiplex .cui-header .cui-header-other cui-extend-header-tools-left";
+        const isInCui=vue.computed(()=>{
+            input.value="";
+            return _isInCui.value
+        })
+        vue.onMounted(()=>{
+            window.setInterval(() => {
+                let dom=document.querySelector(domSelect);
+                _isInCui.value=(dom!=null);
+            }, 100);
+            
+        })
         return {
             input,
+            isInCui,
+            domSelect,
             runtimeCfg,
         }
     }

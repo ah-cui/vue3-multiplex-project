@@ -397,6 +397,7 @@
 	import Table from './components/table'
 	import Tag from './components/tag'
 	import Timeline from './components/timeline'
+	import TreeSelect from './components/treeSelect'
 	import Dropdown from './components/dropdown'
 	import Menu from './components/menu'
 	import Steps from './components/steps'
@@ -446,6 +447,7 @@
 			Table,
 			Tag,
 			Timeline,
+			TreeSelect,
 			Dropdown,
 			Menu,
 			Steps,

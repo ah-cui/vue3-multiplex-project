@@ -20,6 +20,7 @@
   "dependencies": {
     "@ahcui/vue-example": "file:examples",
     "@ahcui/vue3-multiplex": "file:ahcui-vue3-multiplex-1.0.0-rc4.tgz",
+    "@ahcui/vue3-components-url-loader": "file:ahcui-vue3-components-url-loader-1.0.0.tgz",
     "mockjs": "1.1.0",
     "axios": "0.27.2",
     "element-plus": "2.2.2",

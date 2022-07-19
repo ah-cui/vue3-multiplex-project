@@ -57,7 +57,16 @@ const routesUseAhCui = [
          */
         ...pages,
         
-        
+        {
+          path: "loadPage",
+          name: "loadPage",
+          component:()=>import("../../../components/common/pageLoader"),
+          props: route => ({
+            //url: route.query.url,
+            watchQuery:false,
+          }),
+          meta:{title:'加载页面', permission: needLogin}
+        },
         {
           //-------------------关于框架首页
           path: "/aboutme/aboutme-index",
@@ -65,13 +74,7 @@ const routesUseAhCui = [
           component: ()=> import("../../../views/about-me/index.vue"),
           meta: { title: "框架说明", permission: needLogin }
         },
-        /*{
-          path:'/url-loader',
-          name:'url-loader',
-          component:()=>import("../../../components/common/urloader.vue"),
-          props:{watchQuery:true},
-          meta:{ title:'加载页面', permission: needLogin}
-        },*/
+        
       ]
 
 

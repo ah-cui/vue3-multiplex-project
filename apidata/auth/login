@@ -279,9 +279,57 @@
             {
                 "resId": "SDEFM991FFRT6FSRTREDFSBNL9L0GSD",
                 "resPid": "FDDFFF8CE6GSSDDAFRRC379DFS1123FQ",
-                "resName": "UI主题色",
-                "iconClass": "fa fa-th-large",
+                "resName": "UI主题适配",
+                "iconClass": "fa fa-tint",
                 "resPath": "/ahcui-ui/element-plus/themetest"
+            },
+            {
+                "resId": "D3FGSRDGERRAAL9L0DDJ8FBG790AS2",
+                "resPid": "FDDFFF8CE6GSSDDAFRRC379DFS1123FQ",
+                "resName": "相关文档",
+                "iconClass": "fa fa-th-large"
+            },
+            {
+                "resId": "DE591F5RFFDSRDGSSDF0GEFF83EFDXZA",
+                "resPid": "D3FGSRDGERRAAL9L0DDJ8FBG790AS2",
+                "resName": "Github-@ahcui",
+                "iconClass": "fa fa-github",
+                "resPath": "/loadPage?url=https://github.com/ah-cui/vue3-multiplex-project"
+            },
+            {
+                "resId": "EEVM944S4FSRTTTRFFDFSFL0GDFHDF8FDS",
+                "resPid": "D3FGSRDGERRAAL9L0DDJ8FBG790AS2",
+                "resName": "Gitee-@ahcui",
+                "iconClass": "fa fa-bullhorn",
+                "resPath": "/loadPage?url=https://gitee.com/ahcui/vue3-multiplex-project"
+            },
+            {
+                "resId": "FWGHB98VM991FSDRRDFHFSVCA282DCBMKRWZ",
+                "resPid": "D3FGSRDGERRAAL9L0DDJ8FBG790AS2",
+                "resName": "npm-@ahcui",
+                "iconClass": "fa fa-child",
+                "resPath": "/loadPage?url=https://www.npmjs.com/package/@ahcui/vue3-multiplex"
+            },
+            {
+                "resId": "DFEFS3SBTGGDRB4G3FH9LQG9JHW3DD",
+                "resPid": "D3FGSRDGERRAAL9L0DDJ8FBG790AS2",
+                "resName": "vue3文档",
+                "iconClass": "fa fa-flask",
+                "resPath": "/loadPage?url=https://v3.cn.vuejs.org/"
+            },
+            {
+                "resId": "S3RTGGDRFDFH9LQFFJHEEWFF3DASC45",
+                "resPid": "D3FGSRDGERRAAL9L0DDJ8FBG790AS2",
+                "resName": "Element-plus",
+                "iconClass": "fa fa-eyedropper",
+                "resPath": "/loadPage?url=https://element-plus.gitee.io/zh-CN/"
+            },
+            {
+                "resId": "21S1GGS2FF3DASC4533FVG7JLSDAA33FA",
+                "resPid": "D3FGSRDGERRAAL9L0DDJ8FBG790AS2",
+                "resName": "Font Awesome",
+                "iconClass": "fa fa-font-awesome",
+                "resPath": "/loadPage?url=http://www.fontawesome.com.cn/faicons/"
             },
             {
                 "resId": "9B45A7D8C37A4CA7BD46C285612318E3",
@@ -289,6 +337,7 @@
                 "iconClass": "fa fa-heart",
                 "resPath": "/aboutme/aboutme-index"
             }
+
         ],
         "postDesc": "",
         "userLdap": "",

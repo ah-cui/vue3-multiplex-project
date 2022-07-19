@@ -22,17 +22,14 @@ import ahcuiExtendHeaderToolsLeft from './ahcui-extend-header-tools-left.vue';
 import ahcuiExtendHeaderToolsRight from './ahcui-extend-header-tools-right.vue';
 
 
-window.setTimeout(
-    function(){
+!(function(){
     let body = document.getElementsByTagName("body")[0];
     let vnode1 = vue.createVNode(ahcuiExtendHeaderToolsLeft, {})
     let vnode2 = vue.createVNode(ahcuiExtendHeaderToolsRight, {});
-    vnode2 = vue.h(ahcuiExtendHeaderToolsRight,{});
     let divContainer1 = document.createElement("div");
     let divContainer2 = document.createElement("div");
     vue.render(vnode1, divContainer1);
     vue.render(vnode2, divContainer2);
     body.appendChild(divContainer1);
     body.appendChild(divContainer2);
-}
-,2000)
+})() 
