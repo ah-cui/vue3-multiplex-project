@@ -94,12 +94,12 @@ export default {
             cuiapi.content.multipage.setCurrentTabByPath("dasfdfd");
         }
          const openNewTab2 = ()=>{
-           let path="/ahcui-sdk/ahcui-api/content/example?type=props1";
+           let path="/ahcui-sdk/ahcui-api/content/example?Type=Props1";
             cuiapi.content.multipage.addTabByRoutePath("你好",path,{name:"world2!"},{});
             cuiapi.content.multipage.setCurrentTabByPath(path);
         }   
         const openNewTab3 = ()=>{
-            let path="/ahcui-sdk/ahcui-api/content/example?type=props2";
+            let path="/ahcui-sdk/ahcui-api/content/example?Type=PROPS2";
             cuiapi.content.multipage.addTabByRoutePath("你好",path,undefined,{});
             cuiapi.content.multipage.setCurrentTabByPath(path);
         }      
