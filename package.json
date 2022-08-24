@@ -14,12 +14,9 @@
     "build:demo": " node build/demo/webpack.conf.build.js",
     "debug-webpack": "node --inspect-brk build/webpack.dev.conf.js --inline --progress"
   },
-  "bak": {
-    "@ahcui/vue3-multiplex": "file:ahcui-vue3-multiplex-1.0.0-rc1.tgz"
-  },
   "dependencies": {
     "@ahcui/vue-example": "file:examples",
-    "@ahcui/vue3-multiplex": "file:ahcui-vue3-multiplex-1.0.0-rc5.tgz",
+    "@ahcui/vue3-multiplex": "1.0.0-rc5",
     "@ahcui/vue3-components-url-loader": "1.0.0",
     "mockjs": "1.1.0",
     "axios": "0.27.2",

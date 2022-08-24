@@ -1,11 +1,11 @@
 <template>
       <el-card style="width:calc(100% - 20px);margin: auto;">
         <div class="dashboard-img" style="font-size:30px;margin:10px 10px">
-         @ahcui/vue-multiplex@2.1.0-rc3扩展坞使用
+          @ahcui/vue3-multiplex@1.0.0扩展坞使用
         </div>
         <el-alert type="info" :closable="false" show-icon>
           <template #default>
-                      @ahcui/vue-multiplex提供了两种界面插槽扩展方式<br/>
+                       @ahcui/vue3-multiplex提供了两种界面插槽扩展方式<br/>
                       1：web components进行扩展，dom与style通过shadow机制进行隔离，不受框架样式影响，您需要自己处理问题；<br/>
                       2：vue3提供的teleport进行扩展，dom会合并到页面dom树，受框架样式影响，但您仍需要处理扩展内容在主题与布局切换后的样式；<br/>
                       3：同一扩展坞不能使用两种方式同时扩展,示例中使用是为了让开发者看到使用后导致的问题；<br/>
