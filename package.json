@@ -1,6 +1,6 @@
 {
   "name": "project",
-  "version": "1.0.0-rc5",
+  "version": "1.0.0-rc6",
   "description": "@ahcui项目模板,Powered By @ahcui/vue3-multiplex核心库",
   "author": "",
   "private": true,
@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "@ahcui/vue-example": "file:examples",
-    "@ahcui/vue3-multiplex": "1.0.0-rc5",
+    "@ahcui/vue3-multiplex": "1.0.0-rc6",
     "@ahcui/vue3-components-url-loader": "1.0.0",
     "mockjs": "1.1.0",
     "axios": "0.27.2",
