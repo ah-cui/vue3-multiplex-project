@@ -1,5 +1,5 @@
 'use strict'
-
+require('../check-versions')();
 const ora = require('ora');
 const rm = require('rimraf');
 const path = require('path')
@@ -14,12 +14,12 @@ const prodWebpackConfig = require('../prod/webpack.conf')
 const spinner = ora('building for production...');
 
 spinner.start();
-rm(path.join(prodBuildConfig.assetsRoot), err => {
+rm(path.join(prodBuildConfig.assetsRoot, prodBuildConfig.assetsSubDirectory), err => {
     if (err) throw err;
     webpack(
         merge(prodWebpackConfig, {
             entry: {
-                app:  ['./examples/main.js']
+                app: ['./examples/main.js']
             },
             plugins:[
                 new CopyPlugin(
@@ -27,12 +27,12 @@ rm(path.join(prodBuildConfig.assetsRoot), err => {
                         patterns:
                         [
                             {
-                                from: path.resolve(__dirname, '../../apidata'),
-                                to: prodBuildConfig.assetsApiDataDirectory,
-                            },
-                            {
                                 from: path.resolve(__dirname, '../../examples/static'),
                                 to: 'examples/static',
+                            },
+                            {
+                                from: path.resolve(__dirname, '../../README.md'),
+                                to: 'README.md',
                             },
                         ]
                     }

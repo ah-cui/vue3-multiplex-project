@@ -6,7 +6,7 @@
  * 
  */
 
-const DEV = {
+ const DEV = {
   '/restful/api/': {
       target: 'http://localhost:6088',
       changeOrigin: true,

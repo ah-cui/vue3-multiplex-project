@@ -65,7 +65,7 @@
 	/* 打印pdf */
 	const printPdf = () => {
 		ElNotification({
-			url: 'https://cdn.eleadmin.com/20200610/20200708224450.pdf',
+			url: '',
 		})
 	}
 	/* 打印任意内容 */
@@ -81,7 +81,7 @@
 	/* 打印图片 */
 	const printImage = () => {
 		ElNotification({
-			html: '<img src="https://cdn.eleadmin.com/20200610/LrCTN2j94lo9N7wEql7cBr1Ux4rHMvmZ.jpg" style="width: 100%;"/>'
+			html: '<img src="" style="width: 100%;"/>'
 		})
 	}
 </script>

@@ -5,9 +5,10 @@ const utils = require('./utils');
 const prodBuildConfig = require('./prod/prod.conf.js');
 const vueLoaderConfig = require('./vue-loader.conf');
 const webpack = require('webpack');
-const { VueLoaderPlugin } = require('vue-loader')
+const VueLoaderPlugin_v3 = require('vue-loader').VueLoaderPlugin;
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
-function resolve (dir) {
+function resolve(dir) {
     return path.join(__dirname, '..', dir);
 }
 
@@ -18,28 +19,12 @@ module.exports = {
     output: {
         path: prodBuildConfig.assetsRoot,
         filename: '[name].js',
-        publicPath: process.env.NODE_ENV === 'production'? undefined :'/',
-        environment: {
-            // The environment supports arrow functions ('() => { ... }').
-            arrowFunction: false,
-            // The environment supports BigInt as literal (123n).
-            bigIntLiteral: false,
-            // The environment supports const and let for variable declarations.
-            const: false,
-            // The environment supports destructuring ('{ a, b } = obj').
-            destructuring: false,
-            // The environment supports an async import() function to import EcmaScript modules.
-            dynamicImport: false,
-            // The environment supports 'for of' iteration ('for (const x of array) { ... }').
-            forOf: false,
-            // The environment supports ECMAScript Module syntax to import ECMAScript modules (import ... from '...').
-            module: false,
-        }
+        publicPath: process.env.NODE_ENV === 'production' ? undefined : '/',
     },
     resolve: {
-        extensions: ['.js', '.vue', '.json'],
+        extensions: ['.js', '.mjs', '.vue', '.json'],
         alias: {
-            'vue$': 'vue/dist/vue.esm-bundler.js',
+            //'vue$': 'vue/dist/vue.esm-bundler.js',
             '@src': resolve('src'),
             '@lib': resolve('src/lib'),
             '@core': resolve('src/assets/core'),
@@ -53,36 +38,21 @@ module.exports = {
             {
                 test: /\.vue$/,
                 use: [
-                  /*{
-                    loader: 'cache-loader',
-                    options: {
-                     // cacheDirectory: resolve('node_modules/.cache/vue-loader')
+                    {
+                        loader: 'vue-loader',
+                        options: vueLoaderConfig
                     }
-                  },*/
-                  {
-                    loader: 'vue-loader',
-                    options: vueLoaderConfig
-                  }
                 ]
-              },
+            },
             {
-                test: /\.m?js/,
+                test: /\.m?js$/,
                 type: "javascript/auto",
-                //exclude: /node_modules/,
-                include: [
-                    resolve('src'), 
-                    resolve('examples'), 
-                    resolve('node_modules/@ahcui')
-                ]
-              },
-              {
-                test: /\.m?js/,
                 resolve: {
-                  fullySpecified: false,
+                    fullySpecified: false,
                 },
-              },
+            },
             {
-                test: /\.(png|jpeg|jpg|gif|svg|ico)(\?.*)?$/,
+                test: /\.(png|jpeg|jpg|gif|ico)(\?.*)?$/,
                 loader: 'url-loader',
                 options: {
                     limit: 10000,
@@ -98,10 +68,11 @@ module.exports = {
                 }
             },
             {
-                test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
+                test: /\.(woff2?|eot|ttf|otf|svg)(\?.*)?$/,
                 loader: 'url-loader',
                 options: {
                     limit: 10000,
+                    esModule: false,
                     name: utils.assetsPath('fonts/[name].[hash:7].[ext]')
                 }
             }
@@ -110,10 +81,10 @@ module.exports = {
     plugins: [
 
         // new一个实例
-        new VueLoaderPlugin(),
+        new VueLoaderPlugin_v3(),
         new webpack.ProvidePlugin({
- 
-        })
+
+        }),
     ],
     node: {
         global: false,

@@ -19,7 +19,8 @@ exports.cssLoaders = function (options) {
     const cssLoader = {
         loader: 'css-loader',
         options: {
-            sourceMap: options.sourceMap
+            sourceMap: options.sourceMap,
+            esModule: false,
         }
     };
 
@@ -106,7 +107,7 @@ exports.createNotifierCallback = () => {
 };
 exports.sign = String.raw`
 
-        @ahcui/vue3-multiplex模板工程，请修改package.json中项目信息
+            vsui.vue模板工程，请修改package.json中项目相关信息
 
 `;
 

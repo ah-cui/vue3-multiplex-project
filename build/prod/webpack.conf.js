@@ -15,6 +15,7 @@ const env = require('./prod.env')
 
 
 const webpackConfig = merge(baseWebpackConfig, {
+    //mode: 'development',
     mode: 'production',
     module: {
         rules: utils.styleLoaders({
@@ -53,7 +54,7 @@ const webpackConfig = merge(baseWebpackConfig, {
             maxLength: 5
         }),
 
-        // by zerostyle webpack5 issues-4837 告知此插件在mode="production"时自动引入,显式引入会导致两次引入从而引发编译结果出现问题，
+        // by cuiliang webpack5 issues-4837 告知此插件在mode="production"时自动引入,显式引入会导致两次引入从而引发编译结果出现问题，
         // 此代码适用于在非mode="production"情况下需要使用此插件的情况
         // webpack5:module-concatenation-plugin https://webpack.js.org/plugins/module-concatenation-plugin/
         //new webpack.optimize.ModuleConcatenationPlugin(),
@@ -67,7 +68,10 @@ const webpackConfig = merge(baseWebpackConfig, {
                         from: path.resolve(__dirname, '../../static'),
                         to: prodBuildConfig.assetsSubDirectory,
                     },
-                    
+                    {
+                        from: path.resolve(__dirname, '../../apidata'),
+                        to: prodBuildConfig.assetsApiDataDirectory,
+                    }
                 ],
                 options: {
                     concurrency: 50
@@ -85,22 +89,13 @@ const webpackConfig = merge(baseWebpackConfig, {
                     ecma: undefined,
                     warnings: false,
                     parse: {},
-                    sourceMap:prodBuildConfig.productionSourceMap ? prodBuildConfig.devtool : false,
                     compress: {
                         drop_console: false,
                         drop_debugger: false,
                         pure_funcs: ['console.log'], // 移除console
-                    },
-                    output: {
-                        comments: false,
-                        inline_script:true,
-                    },
+                    }
                 },
-            },
-            {
-                extractComments: false,//是否分离注释到单独文件
-            }
-            )
+            })
         ],
         splitChunks: {
             // 分离异步代码（import()） initial 同步代码  all 所有

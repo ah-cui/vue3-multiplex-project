@@ -3,7 +3,7 @@
 
 适用于框架版本：
 
-@ahcui/vue3-multiplex@1.0.0-rc6
+@ahcui/vue3-multiplex@1.0.0-rc7
 
 
 此项目为模板工程，核心库为[@ahcui/vue3-multiplex](https://www.npmjs.com/package/@ahcui/vue3-multiplex).

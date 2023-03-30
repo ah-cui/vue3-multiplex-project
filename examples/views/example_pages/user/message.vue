@@ -175,19 +175,8 @@ export default {
   methods: {
     /* 查询全部数据 */
     query() {
-      this.loading = true;
-      this.$http.get('https://cdn.eleadmin.com/20200609/message.json').then((res) => {
-        this.loading = false;
-        if (res.data.code === 0) {
-          this.allData = res.data.data;
-          this.changeType();
-        } else {
-          this.$message.error(res.data.msg);
-        }
-      }).catch((e) => {
-        this.loading = false;
-        this.$message.error(e.message);
-      });
+     // this.loading = true;
+      
     },
     /* 切换消息类型 */
     changeType(index) {

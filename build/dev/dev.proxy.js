@@ -7,10 +7,10 @@
  * 
  */
 
-const { DEV } = require('./dev.proxy.auth.js');
+ const { DEV } = require('./dev.proxy.auth.js');
 
 
-module.exports =
-{
-    ...DEV,
-}
+ module.exports =
+ {
+     ...DEV,
+ }

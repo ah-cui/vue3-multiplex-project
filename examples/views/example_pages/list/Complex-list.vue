@@ -59,7 +59,7 @@
       <div>
         <div class="basic-list-item">
           <div class="el-cell" style="display:flex">
-            <el-avatar shape="square" class="fl" :size="60" src="https://cdn.eleadmin.com/20200609/c184eef391ae48dba87e3057e70238fb.jpg"/>
+            <el-avatar shape="square" class="fl" :size="60" src=""/>
             <div class="el-cell-content fl">
               <div class="el-cell-title">ElementUI</div>
               <div class="el-cell-desc">Vuex 是一个专为 Vue.js 应用程序开发的状态管理模式。它采用集中式存储管理应用的所有组件的状态，并以相应的规则保证状态以一种可预测的方式发生变化。</div>
