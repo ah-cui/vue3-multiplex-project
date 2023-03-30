@@ -11,7 +11,6 @@ const HtmlWebpackPluginConfig = require('./webpack.plugin.htmlWebpack');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const env = require('./prod.env')
 
 
 const webpackConfig = merge(baseWebpackConfig, {
@@ -33,9 +32,7 @@ const webpackConfig = merge(baseWebpackConfig, {
     },
     plugins: [
         new webpack.DefinePlugin({
-            'process.env': env,
-            '__VUE_OPTIONS_API__':JSON.stringify(true),
-            "__VUE_PROD_DEVTOOLS__":JSON.stringify(false)
+
         }),
         
         // Compress extracted CSS. We are using this plugin so that possible
