@@ -1,0 +1,8 @@
+
+/*
+ 框架默认隐藏掉设置对话框中的气泡提示
+*/
+body div[id^="el-popper-container-"] .ahcui-setting-item-tooltip
+{
+ display: none;   
+}
