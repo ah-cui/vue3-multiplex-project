@@ -1,5 +1,5 @@
 
-import {router,version} from "../ahcui/index.js";
+import {app,router,version} from "../ahcui/index.js";
 import {routesUnUseAhCui,routesUseAhCui} from "./router.define.js";
 import { routerInterceptor0, routerInterceptor2 } from './router.interceptor'
 
@@ -51,6 +51,6 @@ window.setTimeout(function () {
   router.afterEach(routerInterceptor2.afterEach)
 }, 10)
 
-
+app.use(router)
 
 export default router;  

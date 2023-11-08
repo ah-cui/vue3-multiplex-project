@@ -439,9 +439,9 @@ export default {
         paramAttrDefault: "",
         paramAttrComponent: "标题"
       }];
-      form.serviceNodes = [{host: "vscode.cn", port: "80"}, {host: "localhost", port: "80"}];
+      form.serviceNodes = [{host: "https://code.visualstudio.com/", port: "80"}, {host: "localhost", port: "80"}];
       form.errorCodes = [{errorCode: "563", errorMsg: "空指针异常", errorDes: ""}];
-      form.apiServiceLoad = [{loadCode: "vscloude", loadName: "云开发"}, {loadCode: "dev", loadName: "研发管理"}];
+      form.apiServiceLoad = [{loadCode: "cloud", loadName: "云开发"}, {loadCode: "dev", loadName: "研发管理"}];
     };
 
     const onlineTestClick = (row) => {

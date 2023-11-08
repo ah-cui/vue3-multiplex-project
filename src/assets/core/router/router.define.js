@@ -26,7 +26,7 @@ const routesUseAhCui = [
     path: "dashboard",
     name: "dashboard",
     component:()=>import("../../../views/dashboard.vue"),
-    meta: { title: "项目开发模式11",permission: customCheck }
+    meta: { title: "项目开发模式",permission: customCheck }
   },
 ]
 

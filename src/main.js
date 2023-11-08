@@ -13,12 +13,8 @@
  ***************************************************************************************************************************************/
 
 
- import { app, router, store , elementPlus } from './assets/core/index';
+ import { app } from './assets/core/index';
 
- app
- .use(router)
- .use(store)
- .use(elementPlus, { size: 'default ', zIndex: 3000 })
- .mount('#app');
+ app.mount('#app');
  
  

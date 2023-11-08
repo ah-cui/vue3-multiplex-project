@@ -1,12 +1,15 @@
 
-import {vue, app, mixin, elementPlus, axios, version, runtimeCfg,cuiapi} from "./ahcui/index.js";
+import {vue, app, mixin, elementPlus, version, runtimeCfg,cuiapi} from "./ahcui/index.js";
+import axios from "./axios";
 import {NameSpace, namespace} from "./namespace";
 import store from './store';      
 import router from './router';
 import { eventDefine, eventBus,} from './event';
 import mock from './mock';
 import auth from "./auth/index.js";
-import "./style/index.css";
+import "./locale";
+import "./element+/index.js";
+import "./style/index.js";
 
 process.env.NODE_ENV === 'production'?__webpack_public_path__ = runtimeCfg.app_public_path:undefined;
 

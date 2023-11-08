@@ -107,7 +107,7 @@ exports.createNotifierCallback = () => {
 };
 exports.sign = String.raw`
 
-            vsui.vue模板工程，请修改package.json中项目相关信息
+            ahcui模板工程，请修改package.json中项目相关信息
 
 `;
 

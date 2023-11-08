@@ -1,6 +1,6 @@
 {
   "name": "project",
-  "version": "1.0.0-rc7",
+  "version": "1.0.0",
   "description": "@ahcui项目模板,Powered By @ahcui/vue3-multiplex核心库",
   "author": "",
   "private": true,
@@ -14,10 +14,14 @@
     "build:demo": " node build/demo/webpack.conf.build.js",
     "debug-webpack": "node --inspect-brk build/webpack.dev.conf.js --progress"
   },
+  "bakDevDependencies": {
+    "@ahcui/vue3-multiplex": "file:ahcui-vue3-multiplex-1.0.0-rc7.tgz"
+  },
   "dependencies": {
     "@ahcui/vue-example": "file:examples",
-    "@ahcui/vue3-multiplex": "file:ahcui-vue3-multiplex-1.0.0-rc7.tgz",
-    
+    "@ahcui/vue3-multiplex": "file:ahcui",
+    "@element-plus/icons-vue": "2.1.0",
+    "@ahcui/lib-jsext":"0.1.2",
     "axios": "^0.27.2",
     "color-convert": "^2.0.1",
     "element-plus": "^2.2.2",
@@ -30,15 +34,24 @@
     "vuex": "^4.0.2"
   },
   "devDependencies": {
+    "@babel/core": "^7.14.3",
+    "@babel/plugin-proposal-decorators": "^7.14.2",
+    "@babel/plugin-syntax-jsx": "^7.12.13",
+    "@babel/plugin-transform-runtime": "^7.14.3",
+    "@babel/preset-env": "^7.14.4",
+    "@babel/runtime": "^7.14.0",
+    "@babel/runtime-corejs3": "^7.14.0",
+    "babel-loader": "^8.2.2",
     "@webpack-cli/serve": "^1.4.0",
     "autoprefixer": "^10.2.5",
     "build": "^0.1.4",
     "chalk": "^4.1.1",
+    "clean-friendly-errors-webpack-plugin":"^2.1.0",
     "copy-webpack-plugin": "9.0.0",
     "core-js": "^3.23.5",
     "cross-env": "7.0.3",
     "css-loader": "^6.7.1",
-    "css-minimizer-webpack-plugin": "3.0.1",
+    "css-minimizer-webpack-plugin": "5.0.1",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.5.0",
     "mini-css-extract-plugin": "^2.6.0",
@@ -50,7 +63,7 @@
     "rimraf": "^3.0.2",
     "semver": "^7.3.5",
     "shelljs": "^0.8.3",
-    "terser-webpack-plugin": "^5.1.3",
+	  "terser-webpack-plugin": "^5.3.9",
     "url-loader": "^4.1.1",
     "vue-loader": "^17.0.0",
     "vue-style-loader": "^4.1.3",

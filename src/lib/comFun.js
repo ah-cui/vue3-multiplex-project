@@ -27,6 +27,24 @@ function convertDataToModuleTree(list){
 	  return list
 }
 
+/**
+ * 防抖
+ * @param {function(args)} fn 防抖后的延时回调
+ * @param {*} delay 防抖间隔时间，单位毫秒
+ * @returns 
+ */
+function debounce(fn, delay) {
+	let timer = null;
+	return function () {
+		let context = this;
+		let args = arguments;
+		clearTimeout(timer);
+		timer = setTimeout(function () {
+			fn.apply(context, args);
+		}, delay);
+	}
+}
 export {
-	convertDataToModuleTree
+	convertDataToModuleTree,
+	debounce
 }

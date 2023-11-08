@@ -32,7 +32,6 @@ module.exports =
      */
     allowedHosts: [
         'host.com',
-        'vscloud.dev.com'
     ],
 
     /**

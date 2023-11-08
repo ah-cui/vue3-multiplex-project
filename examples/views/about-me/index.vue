@@ -1,6 +1,6 @@
 <template>
 	<el-container >
-			<el-card shadow="never" class="el-card-scoped vs-workbench-scoped">
+			<el-card shadow="never" class="el-card-scoped cui-workbench-scoped">
         		
 					
 						<div class="fileresource">本内容来自于根目录的readme.md</div>

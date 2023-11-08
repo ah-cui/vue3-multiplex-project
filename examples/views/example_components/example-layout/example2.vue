@@ -8,7 +8,7 @@
  * @LastEditTime: 2020-06-01 10:52:47
 --> 
 <template>
-  <el-card shadow="never" class="el-card-scoped vs-workbench-scoped">
+  <el-card shadow="never" class="el-card-scoped cui-workbench-scoped">
     path:'components/layout-2
   </el-card>
 </template>

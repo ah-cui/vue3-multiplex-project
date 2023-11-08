@@ -477,7 +477,7 @@
 			imgUrl: '/examples/static/dashboardImg/td.png',
 			rankfirst: "陈薇",
 			ranksecond: "chenweiwe@ahcui.com",
-			pdt: 'vsai',
+			pdt: 'AI',
 			team: ['/examples/static/dashboardImg/user03.png', '/examples/static/dashboardImg/user04.png',
 				'/examples/static/dashboardImg/user05.png'
 			],
