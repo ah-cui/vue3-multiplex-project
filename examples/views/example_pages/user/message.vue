@@ -1,7 +1,7 @@
 <template>
   <div class="el-body">
     <el-card shadow="never" body-style="padding: 0;">
-      <div class="ele-cell ele-cell-align-top ele-user-message">
+      <div class="user-message">
         <el-menu
             :mode="mode"
             :default-active="active"
@@ -12,7 +12,7 @@
               <el-badge
                   v-if="unReadNumAll"
                   :value="unReadNumAll"
-                  class="ele-badge-static"/>
+                  class="badge-static"/>
             </router-link>
           </el-menu-item>
           <el-menu-item index="notice">
@@ -21,7 +21,7 @@
               <el-badge
                   v-if="unReadNum1"
                   :value="unReadNum1"
-                  class="ele-badge-static"/>
+                  class="badge-static"/>
             </router-link>
           </el-menu-item>
           <el-menu-item index="message">
@@ -30,7 +30,7 @@
               <el-badge
                   v-if="unReadNum2"
                   :value="unReadNum2"
-                  class="ele-badge-static"/>
+                  class="badge-static"/>
             </router-link>
           </el-menu-item>
           <el-menu-item index="todo">
@@ -39,11 +39,11 @@
               <el-badge
                   v-if="unReadNum3"
                   :value="unReadNum3"
-                  class="ele-badge-static"/>
+                  class="badge-static"/>
             </router-link>
           </el-menu-item>
         </el-menu>
-        <div class="ele-cell-content">
+        <div class="cell-content">
           <!-- 数据表格 -->
           <el-table
               ref="table"
@@ -245,44 +245,44 @@ export default {
 </script>
 
 <style scoped>
-.ele-user-message ::v-deep .el-menu {
+.user-message :deep(.el-menu) {
   width: 151px;
   flex-shrink: 0;
 }
 
-.ele-user-message .ele-cell-content {
+.user-message .cell-content {
   padding: 15px;
   box-sizing: border-box;
   overflow: auto;
 }
 
-.ele-user-message .ele-badge-static {
+.user-message .badge-static {
   margin-left: 10px;
 }
 
 @media screen and (min-width: 768px) {
-  .ele-user-message ::v-deep .el-menu .el-menu-item {
+  .user-message :deep( .el-menu .el-menu-item) {
     text-align: right;
   }
 
-  .ele-user-message ::v-deep .el-menu .el-menu-item:first-child {
+  .user-message :deep(.el-menu .el-menu-item:first-child) {
     margin-top: 15px;
   }
 }
 
 @media screen and (max-width: 768px) {
-  .ele-user-message {
+  .user-message {
     display: block;
   }
 
-  .ele-user-message ::v-deep .el-menu {
+  .user-message :deep(.el-menu) {
     width: auto;
     text-align: center;
     white-space: nowrap;
     overflow: auto;
   }
 
-  .ele-user-message ::v-deep .el-menu .el-menu-item {
+  .user-message :deep(.el-menu .el-menu-item) {
     height: 45px;
     line-height: 45px;
     padding: 0 5px;
@@ -290,7 +290,7 @@ export default {
     float: none;
   }
 
-  .ele-user-message .ele-badge-static {
+  .user-message .badge-static {
     margin-left: 3px;
   }
 }

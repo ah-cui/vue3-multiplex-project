@@ -284,6 +284,13 @@
                 "resPath": "/ahcui-ui/element-plus/themetest"
             },
             {
+                "resId": "SDEFM9SESRT3REDFDL0GSDF3V78SFDE",
+                "resPid": "FDDFFF8CE6GSSDDAFRRC379DFS1123FQ",
+                "resName": "本地化",
+                "iconClass": "fa fa-th-large",
+                "resPath": "/ahcui-ui/locale/index"
+            },
+            {
                 "resId": "D3FGSRDGERRAAL9L0DDJ8FBG790AS2",
                 "resPid": "FDDFFF8CE6GSSDDAFRRC379DFS1123FQ",
                 "resName": "相关文档",

@@ -10,161 +10,161 @@ import {version} from "../ahcui/index.js"
 export default {
 
     header:{
-        "sidebar-collapse-title":"收缩",
-        "sidebar-spread-title":"展开",
-        "refresh-current-title":"刷新",
-        "breadcrumb-home-item":"首页",
-        "tools-item-more-title":"框架配置",
+        "sidebar-collapse-title":"Contract",
+        "sidebar-spread-title":"Spread",
+        "refresh-current-title":"Refresh",
+        "breadcrumb-home-item":"Dashboard",
+        "tools-item-more-title":"Frame configuration",
         setting:{
-            "title":`${version.name}@${version.release} 框架UI配置`,
+            "title":`${version.name}@${version.release} Frame UI configuration`,
             hue:{
-                title: "色调配置",
-                "item-title-main-color-select": "主题色选择",
-                "item-tooltip-dawn-blue": "拂晓蓝",
-                "item-tooltip-evening-blue": "薄暮蓝",
-                "item-tooltip-sunset-yellow": "日暮黄",
-                "item-tooltip-rosso-alicante": "火山红",
-                "item-tooltip-reddish-purple": "酱色紫",
-                "item-tooltip-bright-blue": "明亮青",
-                "item-tooltip-aurora-green": "极光绿",
-                "item-tooltip-geek-blue": "极客蓝",
-                "item-tooltip-custom": "自定义",
-                "item-title-dark-mode":"暗黑系",
-                "item-tooltip-dark-mode-switch-html":`暗黑系,@ahcui/vue3-multiplex@1.0.0-rc4版本之后支持:
+                title: "Tonal configuration",
+                "item-title-main-color-select": "Theme color selection",
+                "item-tooltip-dawn-blue": "Dawn blue",
+                "item-tooltip-evening-blue": "Evening blue",
+                "item-tooltip-sunset-yellow": "Sunset yellow",
+                "item-tooltip-rosso-alicante": "Volcanic red",
+                "item-tooltip-reddish-purple": "Reddish purple",
+                "item-tooltip-bright-blue": "Bright blue",
+                "item-tooltip-aurora-green": "Aurora green",
+                "item-tooltip-geek-blue": "Geek Blue",
+                "item-tooltip-custom": "Custom",
+                "item-title-dark-mode":"Darkness",
+                "item-tooltip-dark-mode-switch-html":`Darkness,@vsui/vue-multiplex@2.1.0-rc5 later supported:
                 <ul>
-                    <li>慎用原生dom，支持使用element-plus@2.2.2开发的页面</li>
-                    <li>使用原生dom时，为了黑暗模式有效，请将背景色设置为透明，文字不设置颜色，不然框架样式无权对您设置的样式进行覆盖</li>
-                    <li>重新写的cssvar，并与非黑暗模式的cssvar进行一致化处理</li>
+                    <li>Use native dom sparingly and support pages developed using element-plus@2.2.2</li>
+                    <li>When using native dom, in order for dark mode to be effective, set the background color to transparent and the text to no color, otherwise the frame style has no right to override the style you set</li>
+                    <li>Rewritten cssvar and consistent with non-dark mode cssvar</li>
                 </ul>`,
 
             },
             navigation:{
-                title: "导航设置",
-                "item-title-sidebar-theme":"边栏设置",
-                "item-tooltip-sidebar-theme-dark": "暗色边栏",
-                "item-tooltip-sidebar-theme-light": "亮色边栏",
-                "item-title-header-theme": "顶栏设置",
-                "item-tooltip-header-theme-dark": "暗色顶栏",
-                "item-tooltip-header-theme-light": "亮色顶栏",
-                "item-tooltip-header-theme-color": "主题色顶栏",
-                "item-title-navigation-mode": "导航模式",
-                "item-tooltip-navigation-mode-side-html": ` 左侧菜单布局
+                title: "Navigation Settings",
+                "item-title-sidebar-theme":"Sidebar Setting",
+                "item-tooltip-sidebar-theme-dark": "Dark sidebar",
+                "item-tooltip-sidebar-theme-light": "Bright sidebar",
+                "item-title-header-theme": "Top bar setting",
+                "item-tooltip-header-theme-dark": "Dark top bar",
+                "item-tooltip-header-theme-light": "Bright top bar",
+                "item-tooltip-header-theme-color": "Theme color top bar",
+                "item-title-navigation-mode": "Navigation mode",
+                "item-tooltip-navigation-mode-side-html": ` Left menu layout
                 <br/>
-                与其他开关配合使用后会影响交互，可能会导致存在子菜单的菜单项点击后不会跳转`,
-                "item-tooltip-navigation-mode-header-html": `顶部菜单布局
+                When used in combination with other switches, the interaction will be affected, and menu items with submenus will not jump after being clicked`,
+                "item-tooltip-navigation-mode-header-html": `Top menu layout
                 <br/>
-                与其他开关配合使用后会影响交互，可能会导致存在子菜单的菜单项点击后不会跳转`,
-                "item-tooltip-navigation-mode-mixture-html": `混合菜单布局
+                When used in combination with other switches, the interaction will be affected, and menu items with submenus will not jump after being clicked`,
+                "item-tooltip-navigation-mode-mixture-html": `Hybrid menu layout
                 <br/>
                 <ul>
-                    <li>顶部菜单可使用独立链接，无独立链接时会自动跳转到存在链接的子菜单</li>
-                    <li>左侧菜单与其他开关配合使用后会影响交互，可能会导致存在子菜单的菜单项点击后不会跳转</li>
+                    <li>Independent links can be used in the top menu. If there is no independent link, it will automatically jump to the submenu with a link</li>
+                    <li>When the left menu is used in combination with other switches, the interaction will be affected, which may cause that the menu item with submenu will not jump after being clicked</li>
                 </ul>`,
             },
             slideBar:{
-               title:"滑动配置",
-               "item-title-fixed-header":"固定顶栏区域",
-               "item-title-fixed-header-switch-tooltip-html":`仅选中此项：头部独立，头部下方整体滑动，滑动条为整页滑动条，居页面右侧:
+               title:"Sliding configuration",
+               "item-title-fixed-header":"Fixed top bar area",
+               "item-title-fixed-header-switch-tooltip-html":`Select only this item: The head is independent, the whole slide below the head, the slider is the whole page slider, the right side of the page:
                <ul>
-                   <li>在"固定顶栏区域"情况下，侧边栏为排除头部后的部分，不含logo区域</li>
-                   <li>在"固定侧栏区域"情况下，工作区跟随整页滑动条移动</li>
+                   <li>In the case of "fixed top sidebar area", the sidebar is the part after the exclusion of the head and does not contain the logo area</li>
+                   <li>In the Fixed sidebar Area case, the workspace follows the full-page slider</li>
                </ul>
-               未选中：页面整体滑动，含左侧菜单(如果有)与右侧工作区
-               更多组合使用请自行了解`,
-               "item-title-fixed-sidebar":"固定侧栏区域",
-               "item-title-fixed-sidebar-switch-tooltip-html":`仅选中此项：左侧菜单栏独立，可单独滑动，不随整页滑动条移动:
+               Unchecked: The entire page slides, including the left menu (if any) and the right workspace
+               For more combination use, please find out`,
+               "item-title-fixed-sidebar":"Fixed sidebar area",
+               "item-title-fixed-sidebar-switch-tooltip-html":`Select only this item: The left menu bar is independent and can be moved independently, not with the entire page slider:
                <ul>
-                   <li>在"固定顶栏区域"情况下，侧边栏为排除头部后的部分，不含logo区域</li>
-                   <li>在非"固定顶栏区域"情况下，侧边栏为整个左侧，含logo区域</li>
+                   <li>In the case of "fixed top sidebar area", the sidebar is the part after the exclusion of the head and does not contain the logo area</li>
+                   <li>In the case of non-fixed Top sidebar area, the sidebar is the entire left side, including the logo area</li>
                </ul>
-               更多组合使用请自行了解`,
-               "item-title-fixed-body":"固定主体区域",
-               "item-title-fixed-body-switch-tooltip-html":`仅选中此项：与同时选中"固定顶栏区域"与"固定侧栏区域"效果类似，区别在于滑动条位于工作区右侧，而非整页右侧:
+               For more combination use, please find out`,
+               "item-title-fixed-body":"Fixed subject area",
+               "item-title-fixed-body-switch-tooltip-html":`Select this item only: The effect is similar to that of selecting both "Fixed top bar area" and "fixed sidebar area", except that the slider is located to the right of the workspace instead of the right of the entire page:
                <ul>
-                   <li>在同时选中"固定顶栏区域"情况下，无效果</li>
-                   <li>在同时选中"固定侧栏区域"情况下，无效果</li>
+                   <li>No effect if "Fixed top column area" is also selected</li>
+                   <li>No effect if Fixed sidebar area is also selected</li>
                </ul>
-               更多组合使用请自行了解`
+               For more combination use, please find out`
             },
             enhance:{
-                title:"强化配置",
-                "item-title-double-sidebar":"侧栏双排菜单：",
-                "item-tooltip-double-sidebar-switch-html":`选中此项：在左侧菜单栏右侧出现子菜单:
+                title:"Reinforcement configuration",
+                "item-title-double-sidebar":"Sidebar double row menu：",
+                "item-tooltip-double-sidebar-switch-html":`Check this item: A submenu appears on the right side of the left menu bar:
                     <ul>
-                        <li>在"导航模式"为"左侧菜单布局"时：主菜单显示一级菜单，子菜单显示二级与之后级别菜单</li>
-                        <li>"导航模式"为"混合菜单布局"时：主菜单显示二级菜单，子菜单显示三级与之后级别菜单</li>
-                        <li>受菜单级别要求，不存在该级别菜单时，即便开启双菜单栏也不会显示子菜单</li>
-                        <li>页面头部的菜单收缩操作变为收缩二级菜单的显示，而不是正常状态时的整体菜单收缩</li>
+                        <li>When "Navigation Mode" is "Left Menu Layout" : the main menu displays the first level menu, and the sub-menu displays the second level and the next level menu</li>
+                        <li>When Navigation Mode is Mixed Menu Layout, the main menu displays the second-level menu, and the submenu displays the third-level and lower-level menus</li>
+                        <li>Due to the requirements of the menu level, if no menu of this level exists, the submenu will not be displayed even if two menu bars are enabled</li>
+                        <li>The menu shrink operation of the page header becomes the display of the shrink secondary menu, instead of the overall menu shrink in the normal state</li>
                     </ul>
-                    要求：在"导航模式"为"左侧菜单布局"与"混合菜单布局"时有效
-                    注意：头部收缩导航会有更多效果
-                    更多组合使用请自行了解`,
-                "item-title-body-bespread":"内容区域铺满：",
-                "item-tooltip-body-bespread-switch-html":`选中此项：工作区铺满
+                    Requirement: Valid when Navigation Mode is Left Menu Layout and Mixed Menu Layout
+                    Note: Head retraction navigation is more effective
+                    For more combination use, please find out`,
+                "item-title-body-bespread":"The content area is covered：",
+                "item-tooltip-body-bespread-switch-html":`Check this item: Workspace is full
                     <br/>
-                    未选中：工作区收缩，宽度为1200px`,
-                "item-title-show-footer":"显示全局页尾：",
-                "item-tooltip-show-footer-switch-html":`选中此项：工作区显示页脚签名`,
-                "item-title-multi-page":"工作区多页面",
-                "item-tooltip-multi-page-switch-html":`选中此项：工作区使用选项卡模式，点击菜单为新打开或定位到已打开的目标页，不会丢失原工作页面
+                    Unchecked: Workspace shrunk to 1200px width`,
+                "item-title-show-footer":"Displays the global page tail：",
+                "item-tooltip-show-footer-switch-html":`Check this item: The workspace displays the footer signature`,
+                "item-title-multi-page":"Workspace multipage",
+                "item-tooltip-multi-page-switch-html":`Check this: The workspace uses TAB mode, click the menu for a newly opened or locate to an already opened target page, without losing the original working page
                     <br/>
-                    未选中：工作区为单页面模式，响应菜单点击并切换到目标页
+                    Unchecked: The workspace is in single page mode, response menu click and switch to the target page
                     <br/>
-                    要求：在"顶部菜单布局"时有效`,
-                "item-title-logo-auto-width":"logo宽度自动：",
-                "item-tooltip-logo-auto-width-switch-html":`选中此项：logo区域（含项目名称）的宽度自动展开
+                    Requirement: Valid in Top Menu Layout`,
+                "item-title-logo-auto-width":"logo width automatic：",
+                "item-tooltip-logo-auto-width-switch-html":`Check this item: The width of the logo area (including the project name) expands automatically
                                             <br/>
-                                            未选中：logo区域的宽度为配合侧边栏而和侧边栏宽度一致`,
-                "item-title-menuiconbg-color":"菜单图标彩色：",
-                "item-tooltip-menuiconbg-color-switch-html":`选中此项：菜单前面的图标使用彩色而非主题默认颜色
+                                            Unchecked: The width of the logo area matches the width of the sidebar`,
+                "item-title-menuiconbg-color":"Menu icon color：",
+                "item-tooltip-menuiconbg-color-switch-html":`Check this item: The icon at the front of the menu uses color instead of the theme's default color
                     <br/>
-                    未选中：菜单突变使用主题默认颜色
+                    Unchecked: Menu mutations use theme default colors
                     <br/>
-                    要求：没有图标的菜单将无效
+                    Requirement: Menus without ICONS will not be valid
                     <br/>
-                    注意：目前菜单配置中没有可配置图标颜色的地方，颜色取菜单文字自动计算。`,
-                "item-title-loading-animation":"加载动画模式：",
-                "item-tooltip-loading-animation-select-html":`禁用：不使用加载动画
+                   Note: Where there is no icon color configurable in the current menu configuration, the color is automatically calculated by taking the menu text.`,
+                "item-title-loading-animation":"Load animation mode：",
+                "item-tooltip-loading-animation-select-html":`Disabled: Load animation is not used
                     <br/>
-                    加载条：加载过程显示头部加载细条，支持路由变化与axios请求
+                    Load bar: The load process shows a header load bar that supports routing changes and axios requests
                     <br/>
-                    遮罩层：加载过程页面显示遮罩层，支持路由变化与axios请求`,
-                "item-select-loading-animation-item-disable":"禁用",
-                "item-select-loading-animation-item-nprogress":"加载条",
-                "item-select-loading-animation-item-overlay":"遮罩层",
+                    Mask layer: The loading process page displays the mask layer, which supports routing changes and axios requests`,
+                "item-select-loading-animation-item-disable":"Forbidden",
+                "item-select-loading-animation-item-nprogress":"Loading bar",
+                "item-select-loading-animation-item-overlay":"Mask layer",
 
 
             },
             "sidebar-detail":{
-                title:"侧栏主菜单细节",
-                apply:"适用于：",
+                title:"Sidebar main menu details",
+                apply:"Refer to：",
                 "normal-sidebar-mode":{
-                    title:"常规模式下：",
-                    "menu-normal-width":"正常宽度：",
-                    "menu-item-height":"菜单项高度：",
-                    "menu-collapse-width":"收缩宽度：",
-                    "menu-item-icon-text-margin":"图字间距：",
-                    "menu-item-icon-size":"图标大小：",
-                    "menu-item-text-size":"文字大小：",
+                    title:"In normal mode：",
+                    "menu-normal-width":"Normal width：",
+                    "menu-item-height":"Menu item height：",
+                    "menu-collapse-width":"Shrinkage width：",
+                    "menu-item-icon-text-margin":"Figure spacing：",
+                    "menu-item-icon-size":"Icon size：",
+                    "menu-item-text-size":"Text size：",
                 },
                 "double-sidebar-mode":{
-                    title:"双排模式下：",
-                    "menu-normal-width":"菜单宽度：",
-                    "menu-item-height":"菜单项高度：",
-                    "menu-item-icon-size":"图标大小：",
-                    "menu-item-text-color":"菜单项文字颜色：",
-                    "menu-item-selected-text-color":"选中项文字颜色：",
+                    title:"In dual-row mode：",
+                    "menu-normal-width":"Menu width：",
+                    "menu-item-height":"Menu item height：",
+                    "menu-item-icon-size":"Icon size：",
+                    "menu-item-text-color":"Menu item text color：",
+                    "menu-item-selected-text-color":"Select the item text color：",
                 }
             },
             "header-detail":{
-                title:"头部导航栏细节",
-                apply:"适用于：",
-                height:"头部高度：",
-                "menu-item-margin":"菜单项间距：",
+                title:"Header navigation bar details",
+                apply:"Refer to：",
+                height:"Head height：",
+                "menu-item-margin":"Menu item spacing：",
             },
             more:
             {
-                title:"更多配置项持续增加中..."
+                title:"More configuration items are being added..."
             }
         }
     },

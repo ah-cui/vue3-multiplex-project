@@ -106,6 +106,18 @@ export default [
 			title: "测试组件",
 			permission: customCheck
 		}
-	}
+	},
+     /**
+     * 多语言
+     */
+     {
+		path: "/ahcui-ui/locale/index",
+		name: "/ahcui-ui/locale/index",
+		component: () => import("../../../views/example_ahcui/locale/index"),
+		meta: {
+			title: "测试本地化",
+			permission: customCheck
+		}
+	},
     
 ]

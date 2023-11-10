@@ -137,7 +137,7 @@
 }
 
 /* tab页签 */
-.user-info-tabs ::v-deep .el-tabs__nav-wrap {
+.user-info-tabs :deep(.el-tabs__nav-wrap) {
   padding-left: 20px;
 }
 </style>

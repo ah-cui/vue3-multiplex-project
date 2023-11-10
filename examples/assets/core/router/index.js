@@ -1,5 +1,5 @@
 
-import {router,version}  from "../../../../src/assets/core/";
+import {app,router,version}  from "../../../../src/assets/core/ahcui/index.js";
 import {routesUnUseAhCui,routesUseAhCui} from "./router.define.js";
 import { routerInterceptor } from './router.interceptor'
 
@@ -18,5 +18,7 @@ routesUseAhCui.forEach(route=>{
 
 router.beforeEach(routerInterceptor.beforeEach)
 router.afterEach(routerInterceptor.afterEach)
+
+app.use(router)
 
 export default router;  

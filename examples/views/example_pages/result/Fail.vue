@@ -56,13 +56,6 @@
 		vertical-align: baseline;
 	}
 
-	@media screen and (max-width: 768px) {
-		.ele-body ::v-deep .ele-result-extra {
-			padding-left: 18px;
-			padding-right: 18px;
-		}
-	}
-
 	.el-result-extra {
 		text-align: left;
 		padding: 24px 0px;

@@ -15,13 +15,7 @@
     "debug-webpack": "node --inspect-brk build/webpack.dev.conf.js --progress"
   },
   "bakDevDependencies": {
-    "@ahcui/vue3-multiplex": "file:ahcui-vue3-multiplex-1.0.0-rc7.tgz"
-  },
-  "dependencies": {
-    "@ahcui/vue-example": "file:examples",
-    "@ahcui/vue3-multiplex": "file:ahcui",
-    "@element-plus/icons-vue": "2.1.0",
-    "@ahcui/lib-jsext":"0.1.2",
+    "@ahcui/vue3-multiplex": "file:ahcui-vue3-multiplex-1.0.0-rc7.tgz",
     "axios": "^0.27.2",
     "color-convert": "^2.0.1",
     "element-plus": "^2.2.2",
@@ -30,8 +24,21 @@
     "mockjs": "1.1.0",
     "nprogress": "^0.2.0",
     "vue": "^3.2.33",
-    "vue-router": "^4.0.15",
+    "vue-router": "^4.2.5",
     "vuex": "^4.0.2"
+  },
+  "dependencies": {
+    "@ahcui/vue-example": "file:examples",
+    "@ahcui/vue3-multiplex": "file:ahcui",
+    "@ahcui/lib-jsext":"0.1.2",
+    "@element-plus/icons-vue": "2.1.0",
+    "axios": "0.27.2",
+    "element-plus": "2.2.2",
+    "mitt": "3.0.0",
+    "mockjs": "1.1.0",
+    "vue": "3.2.33",
+    "vue-router": "4.0.15",
+    "vuex": "4.0.2"
   },
   "devDependencies": {
     "@babel/core": "^7.14.3",

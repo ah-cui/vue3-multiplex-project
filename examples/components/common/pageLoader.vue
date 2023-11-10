@@ -5,7 +5,7 @@
 
 <script>
 import UrlLoader from "@ahcui/vue3-components-url-loader";
-
+//import UrlLoader from "../../../vue3-components-url-loader/src/main.js";
 
 export default {
     name: "PageLoader",

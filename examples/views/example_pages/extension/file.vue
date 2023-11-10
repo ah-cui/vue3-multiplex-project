@@ -181,11 +181,11 @@ name: "file"
 }
 
 /* 图片预览组件 */
-.el-file-image-preview ::v-deep img.el-image__inner {
+.el-file-image-preview :deep( img.el-image__inner) {
   display: none;
 }
 
-.el-file-image-preview ::v-deep .el-image__error {
+.el-file-image-preview :deep( .el-image__error) {
   display: none;
 }
 
@@ -206,28 +206,28 @@ name: "file"
   border-radius: 32px;
 }
 
-.el-file-tool-search ::v-deep .el-input-group__append,
-.el-file-tool-search ::v-deep .el-input__inner {
+.el-file-tool-search :deep( .el-input-group__append),
+.el-file-tool-search :deep( .el-input__inner) {
   background-color: transparent;
   border: none;
 }
 
-.el-file-tool-search ::v-deep .el-input-group__append {
+.el-file-tool-search :deep( .el-input-group__append) {
   padding: 0;
 }
 
-.el-file-tool-search ::v-deep .el-input-group__append .el-button {
+.el-file-tool-search :deep(.el-input-group__append .el-button) {
   margin: 0;
   padding: 7px 16px 7px 10px;
   border: none;
 }
 
-.el-file-tool-search ::v-deep .el-input-group__append .el-button > i {
+.el-file-tool-search :deep(.el-input-group__append .el-button > i) {
   font-size: 16px;
   font-weight: 600;
 }
 
-.el-file-tool-search ::v-deep .el-input__inner {
+.el-file-tool-search :deep(.el-input__inner) {
   width: 200px;
   padding-right: 0;
   box-sizing: border-box;
