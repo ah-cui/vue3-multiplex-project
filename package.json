@@ -31,14 +31,14 @@
     "@ahcui/vue-example": "file:examples",
     "@ahcui/vue3-multiplex": "file:ahcui",
     "@ahcui/lib-jsext":"0.1.2",
-    "@element-plus/icons-vue": "2.1.0",
-    "axios": "0.27.2",
-    "element-plus": "2.2.2",
+    "@element-plus/icons-vue": "2.3.1",
+    "axios": "1.6.7",
+    "element-plus": "2.5.0",
     "mitt": "3.0.0",
     "mockjs": "1.1.0",
-    "vue": "3.2.33",
-    "vue-router": "4.0.15",
-    "vuex": "4.0.2"
+    "vue": "3.4.15",
+    "vue-router": "4.2.5",
+    "vuex": "4.1.0"
   },
   "devDependencies": {
     "@babel/core": "^7.14.3",
@@ -53,7 +53,6 @@
     "autoprefixer": "^10.2.5",
     "build": "^0.1.4",
     "chalk": "^4.1.1",
-    "clean-friendly-errors-webpack-plugin":"^2.1.0",
     "copy-webpack-plugin": "9.0.0",
     "core-js": "^3.23.5",
     "cross-env": "7.0.3",
