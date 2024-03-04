@@ -1,18 +1,18 @@
 
 import {app,router,version}  from "../../../../src/assets/core/ahcui/index.js";
-import {routesUnUseAhCui,routesUseAhCui} from "./router.define.js";
+import {routesUnUseahcui,routesUseahcui} from "./router.define.js";
 import { routerInterceptor } from './router.interceptor'
 
 const ahcui=version.name;
 
 //以下代码添加路由到根路由
-routesUnUseAhCui.forEach(route=>{
+routesUnUseahcui.forEach(route=>{
   router.addRoute(route);
 })
 
 
 //以下代码添加路由到@ahcui/vue3-multiplex的home层级路由，业务代码应该添加到home路由下，才会加载@ahcui/vue3-multiplex框架
-routesUseAhCui.forEach(route=>{
+routesUseahcui.forEach(route=>{
   router.addRoute(ahcui,route)
 })
 

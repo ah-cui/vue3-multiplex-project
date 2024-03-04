@@ -25,7 +25,7 @@
 	const src = ref('/examples/static/img/ic-403.svg')
 </script>
 <style>
-.cui-content-view-scoped{
+.ahcui-content-view-scoped{
   height: 100%;
 }
 </style>

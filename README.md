@@ -174,12 +174,12 @@ vuex状态管理组件的引入，状态对象由[@ahcui/vue3-multiplex](https:/
  *                                                   
  *                                                          FBI WARNING
  * 
- *      配置项格式:"__"配置键"__",如："__xx_config__"，框架核心库会自动读取该配置文件，去掉window.__cui_runtime_config__.key之key的前后"__"，转成ES6可引入的对象语法。
+ *      配置项格式:"__"配置键"__",如："__xx_config__"，框架核心库会自动读取该配置文件，去掉window.__ahcui_runtime_config__.key之key的前后"__"，转成ES6可引入的对象语法。
  * 
- *      禁止在开发过程中直接使用window.__cui_runtime_config__.key，请在程序中通过使用 import {runtimeCfg} from "../src/assets/core/"(路径按照实际调整);
+ *      禁止在开发过程中直接使用window.__ahcui_runtime_config__.key，请在程序中通过使用 import {runtimeCfg} from "../src/assets/core/"(路径按照实际调整);
  *
- *		如：window.__cui_runtime_config__.__custom__使用时：runtimeCfg.custom;
- *			window.__cui_runtime_config__.__custom__._a_使用时：runtimeCfg.custom._a_;
+ *		如：window.__ahcui_runtime_config__.__custom__使用时：runtimeCfg.custom;
+ *			window.__ahcui_runtime_config__.__custom__._a_使用时：runtimeCfg.custom._a_;
  *
  * 
  *      
@@ -189,14 +189,14 @@ vuex状态管理组件的引入，状态对象由[@ahcui/vue3-multiplex](https:/
 
 
 
-     window.__cui_runtime_config__ = {
+     window.__ahcui_runtime_config__ = {
 
          /**
      * 前端程序发布路径，该配置项仅在生产模式（build）启作用
-     * example:"/cui/vue/" 
+     * example:"/ahcui/vue/" 
      * default:"/"
      * 此配置项是为了配合在容器环境的虚拟路径下发布程序使用，如不想把程序放入容器根路径下，则需要配置此项为需要的目录
-     * 如想把程序发布到"http://ip:port/cui/"下("cui"为创建的虚拟路径或站点下cui目录)
+     * 如想把程序发布到"http://ip:port/ahcui/"下("ahcui"为创建的虚拟路径或站点下ahcui目录)
      * 配置了此项后，项目资源路径会指向该目录下（dist目录下的结构不变），同时在生产环境下在nginx的根目录创建此目录并作目录映射,
      * */
         __app_public_path__ : "/",
@@ -244,35 +244,35 @@ vuex状态管理组件的引入，状态对象由[@ahcui/vue3-multiplex](https:/
         {
             /**
              * 是否收缩侧边栏，boolean
-             * 如启用，则自动增加样式名：cui-style-layout-sidebar-collapse
+             * 如启用，则自动增加样式名：ahcui-style-layout-sidebar-collapse
              * 
              */
             sideBarCollapse:false,
             /**
              * 侧边栏样式名称
              * 取值：
-             * cui-style-theme-sidebar-dark
-             * cui-style-theme-sidebar-light
+             * ahcui-style-theme-sidebar-dark
+             * ahcui-style-theme-sidebar-light
              */
-            sideBarClassName: 'cui-style-theme-sidebar-dark',
+            sideBarClassName: 'ahcui-style-theme-sidebar-dark',
 
             /**
              * 顶栏设置
              * 取值：
-             * cui-style-theme-header-dark
-             * cui-style-theme-header-light
-             * cui-style-theme-header-color
+             * ahcui-style-theme-header-dark
+             * ahcui-style-theme-header-light
+             * ahcui-style-theme-header-color
              * 
              */
-            headerBarClassName: 'cui-style-theme-header-dark',
+            headerBarClassName: 'ahcui-style-theme-header-dark',
 
             /**
              * 界面风格名称
              */
-            controlClassName: 'cui-style-theme-color-2',
+            controlClassName: 'ahcui-style-theme-color-2',
 
             /**
-             * 当界面风格名称为自定义：cui-style-theme-color-custom 时，由用户指定的颜色
+             * 当界面风格名称为自定义：ahcui-style-theme-color-custom 时，由用户指定的颜色
              */
             controlCustomColor:'#000',
             /**
@@ -283,39 +283,39 @@ vuex状态管理组件的引入，状态对象由[@ahcui/vue3-multiplex](https:/
             /**
              * 导航模式
              * 取值：
-             * cui-style-layout-nav-mode-side:左侧菜单布局（所有级别,向下展开）
-             * cui-style-layout-nav-mode-header:顶部菜单布局（所有级别，向下展开）
-             * cui-style-layout-nav-mode-mixture:混合菜单布局（顶部为一级，测边为二级及以下）
+             * ahcui-style-layout-nav-mode-side:左侧菜单布局（所有级别,向下展开）
+             * ahcui-style-layout-nav-mode-header:顶部菜单布局（所有级别，向下展开）
+             * ahcui-style-layout-nav-mode-mixture:混合菜单布局（顶部为一级，测边为二级及以下）
              */
-            navigationMode: 'cui-style-layout-nav-mode-mixture',
+            navigationMode: 'ahcui-style-layout-nav-mode-mixture',
 
             /**
              * 侧栏双排菜单模式
-             * 如启用，则自动增加样式名：cui-style-layout-doublesidebar
+             * 如启用，则自动增加样式名：ahcui-style-layout-doublesidebar
              */
             doubleSidebar: false,
 
             /**
              * 内容区域铺满模式
-             * 如启用，则自动增加样式名：cui-style-layout-bodybespread
+             * 如启用，则自动增加样式名：ahcui-style-layout-bodybespread
              */
             bodyBespread: false,
 
             /**
                 * 是否固定顶栏区域
-                * 如启用，则自动增加样式名：cui-style-layout-fixedheader
+                * 如启用，则自动增加样式名：ahcui-style-layout-fixedheader
                 */
             fixedHeader: false,
 
             /**
                 * 是否固定侧边栏区域
-                * 如启用，则自动增加样式名：cui-style-layout-fixedsidebar
+                * 如启用，则自动增加样式名：ahcui-style-layout-fixedsidebar
                 */
             fixedSidebar: false,
 
             /**
                 * 是否固定主体区域
-                * 如启用，则自动增加样式名：cui-style-layout-fixedbody
+                * 如启用，则自动增加样式名：ahcui-style-layout-fixedbody
                 */
             fixedBody: false,
 
@@ -330,7 +330,7 @@ vuex状态管理组件的引入，状态对象由[@ahcui/vue3-multiplex](https:/
             sidebarIconColorful: false,
 
             /**
-                * 显示页脚，则自动增加样式名：cui-style-layout-showfooter
+                * 显示页脚，则自动增加样式名：ahcui-style-layout-showfooter
                 */
             showFooter: false,
 
@@ -430,7 +430,7 @@ vuex状态管理组件的引入，状态对象由[@ahcui/vue3-multiplex](https:/
 ##### 2.3.1：<a id="begindev-config-app_public_path">配置项：runtimeCfg.app_public_path</a>
 
 
-此配置项来源自配置文件节点:window.__cui_runtime_config__.__app_public_path__,通过本核心库转化为runtimeCfg.app_public_path，此变量用在mixin导出的basePath，用于可调整处理编译后的程序运行基路径，
+此配置项来源自配置文件节点:window.__ahcui_runtime_config__.__app_public_path__,通过本核心库转化为runtimeCfg.app_public_path，此变量用在mixin导出的basePath，用于可调整处理编译后的程序运行基路径，
 
 此变量源自于webpack提供的__webpack_public_path__,具体参见于webpack5的官方文档
 
@@ -459,7 +459,7 @@ vuex状态管理组件的引入，状态对象由[@ahcui/vue3-multiplex](https:/
 ```
 您可以在配置中增加相应代码，如下：
 ```
-window.__cui_runtime_config__ = {
+window.__ahcui_runtime_config__ = {
 	...其他配置项
 	
 	/*******************************************************自定义配置项请添加到下方****************************************************************/

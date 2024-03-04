@@ -3,11 +3,11 @@
 import {customCheck} from './router.auth';
 
 /**
- *  这些路由是不使用AhCui框架的路由地址
+ *  这些路由是不使用ahcui框架的路由地址
  * 
  * 
  */
-const routesUnUseAhCui =  [
+const routesUnUseahcui =  [
   {
     path: "/login",
     name: "login",
@@ -18,10 +18,10 @@ const routesUnUseAhCui =  [
 
 
 /**
- * 这些路由是使用AhCui框架的路由地址
+ * 这些路由是使用ahcui框架的路由地址
  * 
  */
-const routesUseAhCui = [
+const routesUseahcui = [
   {
     path: "dashboard",
     name: "dashboard",
@@ -32,6 +32,6 @@ const routesUseAhCui = [
 
 
 export {
-  routesUnUseAhCui,
-  routesUseAhCui
+  routesUnUseahcui,
+  routesUseahcui
 } 

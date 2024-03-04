@@ -359,9 +359,9 @@ export default {
 .aside-btn01 {color: black;}
 .aside-btn01:hover,
 .aside-btn01:focus {color: var(--element-ui-color-main);}
-.cui-workbench-card-scoped {height: 100% !important;}
+.ahcui-workbench-card-scoped {height: 100% !important;}
 .el-select .el-input .el-select__caret {color: var(--el-select-input-color) !important;}
-.cui-workbench-card-scoped :deep(.el-card__body){height: 98% !important;}
+.ahcui-workbench-card-scoped :deep(.el-card__body){height: 98% !important;}
 .el-table-tool-default{margin-bottom: 0;padding: 5px 15px;box-sizing: border-box;/*background: #fafafa;border-top: 1px solid #ededed;border-left: 1px solid #ededed;border-right: 1px solid #ededed;*/}
 .el-list-scope-bodypadding{margin:15px;}
 *>>> .el-table thead{color: #303133 !important; font-weight: normal;/*background: #fafafa;*/}

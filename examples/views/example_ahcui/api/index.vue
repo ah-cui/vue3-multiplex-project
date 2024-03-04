@@ -19,8 +19,8 @@
           </template>
           <p>
               <el-button v-if="runtimeCfg.multiplex_style.multiPageMode" @click="()=>{
-                cuiapi.content.multipage.addTabByRoutePath('API定义','/ahcui-sdk/ahcui-api/define');
-                cuiapi.content.multipage.setCurrentTabByPath('/ahcui-sdk/ahcui-api/define');
+                ahcuiapi.content.multipage.addTabByRoutePath('API定义','/ahcui-sdk/ahcui-api/define');
+                ahcuiapi.content.multipage.setCurrentTabByPath('/ahcui-sdk/ahcui-api/define');
                 }">查看演示</el-button>
               <router-link v-else to="/ahcui-sdk/ahcui-api/define" tag='div'>查看演示</router-link>
           </p>
@@ -31,14 +31,14 @@
           </template>
           <p>
               <el-button v-if="runtimeCfg.multiplex_style.multiPageMode" @click="()=>{
-                cuiapi.content.multipage.addTabByRoutePath('头部操作API','/ahcui-sdk/ahcui-api/header');
-                cuiapi.content.multipage.setCurrentTabByPath('/ahcui-sdk/ahcui-api/header');
+                ahcuiapi.content.multipage.addTabByRoutePath('头部操作API','/ahcui-sdk/ahcui-api/header');
+                ahcuiapi.content.multipage.setCurrentTabByPath('/ahcui-sdk/ahcui-api/header');
                 }">页面头部api演示</el-button>
               <router-link v-else to="/ahcui-sdk/ahcui-api/header" tag='div'>页面头部api演示</router-link>
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               <el-button v-if="runtimeCfg.multiplex_style.multiPageMode" @click="()=>{
-                cuiapi.content.multipage.addTabByRoutePath('工作区API','/ahcui-sdk/ahcui-api/content');
-                cuiapi.content.multipage.setCurrentTabByPath('/ahcui-sdk/ahcui-api/content');
+                ahcuiapi.content.multipage.addTabByRoutePath('工作区API','/ahcui-sdk/ahcui-api/content');
+                ahcuiapi.content.multipage.setCurrentTabByPath('/ahcui-sdk/ahcui-api/content');
                 }">页面工作区api演示</el-button>
               <router-link v-else to="/ahcui-sdk/ahcui-api/content" tag='div'>页面工作区api演示</router-link>
           </p>
@@ -48,14 +48,14 @@
 </template>
 
 <script>
-import {vue, mixin, cuiapi, eventDefine as events, runtimeCfg} from '../../../assets/core/index';
+import {vue, mixin, ahcuiapi, eventDefine as events, runtimeCfg} from '../../../assets/core/index';
 export default {
     name:"@ahcui/vue3-multiplex-sdk-api",
 
     setup(){
       
         return {
-          cuiapi,
+          ahcuiapi,
           runtimeCfg
         }
     }

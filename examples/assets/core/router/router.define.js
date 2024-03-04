@@ -6,16 +6,16 @@ import pages from "./router.define.example.pages";
 import {needLogin} from './router.auth';
 
 /**
- *  这些路由是不使用AhCui框架的路由地址
+ *  这些路由是不使用ahcui框架的路由地址
  * 
  * 
  */
- const routesUnUseAhCui =  [
+ const routesUnUseahcui =  [
 
 ]
 
 
-const routesUseAhCui = [
+const routesUseahcui = [
     
         {
           path: "/dashboard",
@@ -80,6 +80,6 @@ const routesUseAhCui = [
 
 
       export {
-        routesUnUseAhCui,
-        routesUseAhCui
+        routesUnUseahcui,
+        routesUseahcui
       } 

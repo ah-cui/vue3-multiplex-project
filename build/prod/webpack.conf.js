@@ -51,7 +51,7 @@ const webpackConfig = merge(baseWebpackConfig, {
             maxLength: 5
         }),
 
-        // by cuiliang webpack5 issues-4837 告知此插件在mode="production"时自动引入,显式引入会导致两次引入从而引发编译结果出现问题，
+        // by ahcuiliang webpack5 issues-4837 告知此插件在mode="production"时自动引入,显式引入会导致两次引入从而引发编译结果出现问题，
         // 此代码适用于在非mode="production"情况下需要使用此插件的情况
         // webpack5:module-concatenation-plugin https://webpack.js.org/plugins/module-concatenation-plugin/
         //new webpack.optimize.ModuleConcatenationPlugin(),

@@ -22,17 +22,17 @@
 </template>
 
 <script>
-import { cuiapi } from '../../../assets/core/index';
+import { ahcuiapi } from '../../../assets/core/index';
 export default {
     name:"@ahcui/vue3-multiplex-sdk-api-header",
 
     setup(){
 
         const click1 = ()=>{
-            cuiapi.header.openSetting();
+            ahcuiapi.header.openSetting();
         }
         const click2 = ()=>{
-            cuiapi.header.closeSetting();
+            ahcuiapi.header.closeSetting();
         }
 
         return {

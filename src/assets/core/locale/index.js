@@ -1,4 +1,4 @@
-import {cuiapi} from  "../ahcui/index.js";
+import {ahcuiapi} from  "../ahcui/index.js";
 import zh_CN from "./zh_CN.js";
 import en_US from "./en_US.js";
 import zh_TW from "./zh_TW.js";
@@ -10,6 +10,6 @@ const langs=[
 
 ];
 langs.forEach((lang,index,array)=>{
-    cuiapi.global.locale.registLanguage(lang.name, lang.lang);
+    ahcuiapi.global.locale.registLanguage(lang.name, lang.lang);
 })
-cuiapi.global.locale.setCurrentLanguage(langs[0].name);
+ahcuiapi.global.locale.setCurrentLanguage(langs[0].name);

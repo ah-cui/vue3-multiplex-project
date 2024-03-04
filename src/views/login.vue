@@ -1,9 +1,9 @@
 <template>
-    <div class="wrapper cui-layout cui-theme  cui-style-theme-color-2">
+    <div class="wrapper ahcui-layout ahcui-theme  ahcui-style-theme-color-2">
         <video loop muted autoplay playsinline poster="/static/img/loginbg.jpg" class="background-video">
             <source src="/static/video/login_bgvideo.mp4" type="video/mp4">
         </video>
-        <cui-head></cui-head>
+        <ahcui-head></ahcui-head>
         <div class="video-shadow">
             <canvas class="constellation" width="1920" height="887"></canvas>
         </div>
@@ -26,7 +26,7 @@
                
             </el-form>
              <div class="source clearfix">
-                <a href="https://github.com/ah-cui/vue3-multiplex-project" target="_blank" title="访问github上的此项目" >
+                <a href="https://github.com/ah-ahcui/vue3-multiplex-project" target="_blank" title="访问github上的此项目" >
                   <svg height="32" aria-hidden="true" viewBox="0 0 16 16" version="1.1" width="32" data-view-component="true" class="octicon octicon-mark-github v-align-middle">
                       <path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path>
                   </svg>
@@ -39,27 +39,27 @@
                 </a>
               </div>
         </div>
-        <cui-bottom></cui-bottom>
+        <ahcui-bottom></ahcui-bottom>
     </div>
 </template>
 
 
 
 <script>
-import cuiHead from '../components/common/loginHeader.vue'
-import cuiBottom from '../components/common/loginBottom.vue'
+import ahcuiHead from '../components/common/loginHeader.vue'
+import ahcuiBottom from '../components/common/loginBottom.vue'
 import { vue,auth,runtimeCfg ,mixin} from '../assets/core/index'
 import { ElMessage } from 'element-plus';
 import Constellation from '../lib/constellation.js'
 
 export default {
   components: {
-    cuiHead,
-    cuiBottom
+    ahcuiHead,
+    ahcuiBottom
   },
   setup(){
     const {
-      cuiRouter,
+      ahcuiRouter,
     } = mixin();
     let username=vue.ref('admin'),password=vue.ref('123456');
     const initConstellation =function () {
@@ -109,7 +109,7 @@ export default {
       auth.login(
         username.value,
         password.value).then(() => {
-        cuiRouter.push('/')
+        ahcuiRouter.push('/')
       }).catch(error => {
         ElMessage({
           message: `登录过程出错，失败原因是：${error.message}`,

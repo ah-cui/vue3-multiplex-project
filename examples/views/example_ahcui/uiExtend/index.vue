@@ -6,7 +6,7 @@
             <el-alert type="info" :closable="false" show-icon>
               <template #default>
                 扩展坞是@ahcui/vue3-multiplex@1.0.0-rc1之后版本提供的，为了项目在需要时进行部分UI定制与扩展，是框架配置项之外的能力补充，<br/>
-                      1：扩展坞是以"cui-extend-"开头的html标签；<br/>
+                      1：扩展坞是以"ahcui-extend-"开头的html标签；<br/>
                       2：每个扩展坞都具有独立的html标签，便于独立定制；<br/>
                       3：每个扩展坞标签都有class名称，便于使用queryselector通过标签或class进行选取；<br/>
               </template>
@@ -19,8 +19,8 @@
           </template>
           <p>
               <el-button v-if="runtimeCfg.multiplex_style.multiPageMode" @click="()=>{
-                cuiapi.content.multipage.addTabByRoutePath('扩展坞','/ahcui-sdk/ahcui-ui-extend/dock');
-                cuiapi.content.multipage.setCurrentTabByPath('/ahcui-sdk/ahcui-ui-extend/dock');
+                ahcuiapi.content.multipage.addTabByRoutePath('扩展坞','/ahcui-sdk/ahcui-ui-extend/dock');
+                ahcuiapi.content.multipage.setCurrentTabByPath('/ahcui-sdk/ahcui-ui-extend/dock');
                 }">查看介绍</el-button>
               <router-link v-else to="/ahcui-sdk/ahcui-ui-extend/dock" tag='div'>查看介绍</router-link>
           </p>
@@ -31,8 +31,8 @@
           </template>
           <p>
               <el-button v-if="runtimeCfg.multiplex_style.multiPageMode" @click="()=>{
-                cuiapi.content.multipage.addTabByRoutePath('扩展演示','/ahcui-sdk/ahcui-ui-extend/demo');
-                cuiapi.content.multipage.setCurrentTabByPath('/ahcui-sdk/ahcui-ui-extend/demo');
+                ahcuiapi.content.multipage.addTabByRoutePath('扩展演示','/ahcui-sdk/ahcui-ui-extend/demo');
+                ahcuiapi.content.multipage.setCurrentTabByPath('/ahcui-sdk/ahcui-ui-extend/demo');
                 }">查看演示</el-button>
               <router-link v-else to="/ahcui-sdk/ahcui-ui-extend/demo" tag='div'>查看演示</router-link>            
           </p>
@@ -42,7 +42,7 @@
 </template>
 
 <script>
-import {vue, mixin, cuiapi, eventDefine as events, runtimeCfg} from '../../../assets/core/index';
+import {vue, mixin, ahcuiapi, eventDefine as events, runtimeCfg} from '../../../assets/core/index';
 export default {
     name:"@ahcui/vue3-multiplex-sdk-uiExtend",
 
@@ -51,7 +51,7 @@ export default {
         
 
          return {
-          cuiapi,
+          ahcuiapi,
           runtimeCfg
         }
     }

@@ -15,10 +15,10 @@
              <div>本地化选择</div>
           </template>
           <p>
-            <el-select v-model="cuiLocale.currentName" class="m-2" placeholder="Select" size="large"  @change="function(value){
-                cuiapi.global.locale.setCurrentLanguage(value)}">
+            <el-select v-model="ahcuiLocale.currentName" class="m-2" placeholder="Select" size="large"  @change="function(value){
+                ahcuiapi.global.locale.setCurrentLanguage(value)}">
                 <el-option
-                v-for="(value,key,index) in cuiLocale.langs"
+                v-for="(value,key,index) in ahcuiLocale.langs"
                 :key="key"
                 :label="key"
                 :value="key"
@@ -30,15 +30,15 @@
 </template>
 
 <script>
-import {vue, mixin, cuiapi, eventDefine as events, runtimeCfg} from '../../../assets/core/index';
+import {vue, mixin, ahcuiapi, eventDefine as events, runtimeCfg} from '../../../assets/core/index';
 export default {
     name:"@vsui/vue-core_api",
 
     setup(){
-      const {cuiLocale}=mixin();
+      const {ahcuiLocale}=mixin();
         return {
-          cuiapi,
-          cuiLocale,
+          ahcuiapi,
+          ahcuiLocale,
           runtimeCfg
         }
     }

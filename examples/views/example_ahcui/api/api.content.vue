@@ -8,9 +8,9 @@
              API是@ahcui/vue3-multiplex@1.0.0作为核心库组件提供的一种交互方式，项目开发在需要时，可以主动发起API调用让框架做出对应操作；<br/>
             1：API采用命名空间进行了隔离，便于使用者快速定位API所起的作用与影响到的框架内置元件；<br/>
             2：工作区API分为单页面模式API与多页面模式API；<br/>
-            3：多页面模式API使用"cuiapi.content.multipage"作为前缀，意味着只能在多页面模式使用；<br/>
-            4：单页面模式API使用"cuiapi.content.singlepage"作为前缀，意味着只能在单页面模式使用；<br/>
-            5：多页面与单页面存在公用API，这些API无需区分页面模式，直接使用即可，这些API使用"cuiapi.content"作为前缀，如：refreshCurrent用来刷新当前工作区；<br/>
+            3：多页面模式API使用"ahcuiapi.content.multipage"作为前缀，意味着只能在多页面模式使用；<br/>
+            4：单页面模式API使用"ahcuiapi.content.singlepage"作为前缀，意味着只能在单页面模式使用；<br/>
+            5：多页面与单页面存在公用API，这些API无需区分页面模式，直接使用即可，这些API使用"ahcuiapi.content"作为前缀，如：refreshCurrent用来刷新当前工作区；<br/>
           </template>
         </el-alert>
 	  </el-card>
@@ -70,15 +70,15 @@
 
 <script>
 
-import { vue, cuiapi, mixin, eventDefine as events } from '../../../assets/core/index';
+import { vue, ahcuiapi, mixin, eventDefine as events } from '../../../assets/core/index';
 import example from "./example.vue";
 export default {
     name:"@ahcui/vue3-multiplex-sdk-api-content",
 
     setup(){
         const {
-                cuiRoute,
-                cuiEventbus
+                ahcuiRoute,
+                ahcuiEventbus
               } = mixin()
         const currentIndex1=vue.ref(-1),
         currentIndex2=vue.ref(-1),
@@ -90,54 +90,54 @@ export default {
 
         const refreshDate=(new Date()).format("YYYY-MM-dd hh:mm:ss");
         const openNewTab1 = ()=>{
-            cuiapi.content.multipage.addTabByCustomName("你好","dasfdfd",example,{name:"world1!"},{});
-            cuiapi.content.multipage.setCurrentTabByPath("dasfdfd");
+            ahcuiapi.content.multipage.addTabByCustomName("你好","dasfdfd",example,{name:"world1!"},{});
+            ahcuiapi.content.multipage.setCurrentTabByPath("dasfdfd");
         }
          const openNewTab2 = ()=>{
            let path="/ahcui-sdk/ahcui-api/content/example?Type=Props1";
-            cuiapi.content.multipage.addTabByRoutePath("你好",path,{name:"world2!"},{});
-            cuiapi.content.multipage.setCurrentTabByPath(path);
+            ahcuiapi.content.multipage.addTabByRoutePath("你好",path,{name:"world2!"},{});
+            ahcuiapi.content.multipage.setCurrentTabByPath(path);
         }   
         const openNewTab3 = ()=>{
             let path="/ahcui-sdk/ahcui-api/content/example?Type=PROPS2";
-            cuiapi.content.multipage.addTabByRoutePath("你好",path,undefined,{});
-            cuiapi.content.multipage.setCurrentTabByPath(path);
+            ahcuiapi.content.multipage.addTabByRoutePath("你好",path,undefined,{});
+            ahcuiapi.content.multipage.setCurrentTabByPath(path);
         }      
         const getCurrentTab= ()=>{
-            let currentItem=cuiapi.content.multipage.getCurrentTabInfo();
+            let currentItem=ahcuiapi.content.multipage.getCurrentTabInfo();
             currentIndex1.value=currentItem.index;
         }
         const setCurrentTabByIndex=()=>{
-            cuiapi.content.multipage.setCurrentTabByIndex(currentIndex2.value);
+            ahcuiapi.content.multipage.setCurrentTabByIndex(currentIndex2.value);
         }
         const setCurrentTabByPath=()=>{
-            cuiapi.content.multipage.setCurrentTabByPath(currentPath1.value);
+            ahcuiapi.content.multipage.setCurrentTabByPath(currentPath1.value);
         }
         const closeTabByIndex=()=>{
-            cuiapi.content.multipage.closeTabByIndex(currentIndex3.value);
-            cuiapi.content.multipage.setCurrentTabByIndex(0);
+            ahcuiapi.content.multipage.closeTabByIndex(currentIndex3.value);
+            ahcuiapi.content.multipage.setCurrentTabByIndex(0);
         }
         const closeTabByPath=()=>{
-            cuiapi.content.multipage.closeTabByPath(currentPath2.value);
+            ahcuiapi.content.multipage.closeTabByPath(currentPath2.value);
         }
         const getTabsLength=()=>{
-            tabsLength.value = cuiapi.content.multipage.getTabsLength(currentPath2.value);
+            tabsLength.value = ahcuiapi.content.multipage.getTabsLength(currentPath2.value);
         }
         const refreshCurrent=()=>{
-            cuiapi.content.refreshCurrent();
+            ahcuiapi.content.refreshCurrent();
         }
 
         vue.onMounted(()=>{
-            /*cuiapi.content.multipage.tabChangeHandle((oldValue,newValue)=>{
+            /*ahcuiapi.content.multipage.tabChangeHandle((oldValue,newValue)=>{
                 return allowChange;
             })*/
-            cuiEventbus.on(events.content.multipage.changeCurrentTab,(eventArgObj)=>{
+            ahcuiEventbus.on(events.content.multipage.changeCurrentTab,(eventArgObj)=>{
               let oldValue = eventArgObj.oldValue;
               let newValue = eventArgObj.newValue;
               eventArgObj.allowChange=allowChange.value;
               
             })
-            cuiEventbus.on(events.changedSideBarClassName,(eventArgObj)=>{
+            ahcuiEventbus.on(events.changedSideBarClassName,(eventArgObj)=>{
               let oldValue = eventArgObj.oldValue;
               let newValue = eventArgObj.newValue;
               

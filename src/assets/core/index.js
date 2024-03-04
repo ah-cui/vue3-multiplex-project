@@ -1,5 +1,5 @@
 
-import {vue, app, mixin, elementPlus, version, runtimeCfg,cuiapi} from "./ahcui/index.js";
+import {vue, app, mixin, elementPlus, version, runtimeCfg,ahcuiapi} from "./ahcui/index.js";
 import axios from "./axios";
 import {NameSpace, namespace} from "./namespace";
 import store from './store';      
@@ -13,4 +13,4 @@ import "./style/index.js";
 
 process.env.NODE_ENV === 'production'?__webpack_public_path__ = runtimeCfg.app_public_path:undefined;
 
-export {vue, app, cuiapi, mixin, elementPlus, axios, NameSpace, namespace, eventDefine, eventBus, version, runtimeCfg, router, store, auth, mock}
+export {vue, app, ahcuiapi, mixin, elementPlus, axios, NameSpace, namespace, eventDefine, eventBus, version, runtimeCfg, router, store, auth, mock}

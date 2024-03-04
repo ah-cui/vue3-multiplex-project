@@ -9,7 +9,7 @@
 
 
 /*此样式用来处理多页面模式时工作区使用@ahcui/vue3-components-url-loader组件加载页面的样式*/
-.cui-multiplex .cui-layout .cui-content .cui-content-body .multipage .el-tabs-scoped > .el-tabs__content .el-tab-pane[aria-labelledby*="tab-/loadpage?url"] .cui-content-view-scoped
+.ahcui-multiplex .ahcui-layout .ahcui-content .ahcui-content-body .multipage .el-tabs-scoped > .el-tabs__content .el-tab-pane[aria-labelledby*="tab-/loadpage?url"] .ahcui-content-view-scoped
 {
   height: 100%;
   overflow: hidden;

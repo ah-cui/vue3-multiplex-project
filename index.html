@@ -12,7 +12,7 @@
 		<meta name="referrer" content="no-referrer"/>
 	</head>
 	<body>
-		<div id="app" class="cui-multiplex"></div>
+		<div id="app" class="ahcui-multiplex"></div>
 	</body>
 	<script id="runtime" type="text/javascript">
 		/**
@@ -37,15 +37,15 @@
 				body = document.getElementsByTagName("body")[0],
 				scriptLoadSuccess = function(){
 					try{
-						if(!window.__cui_runtime_config__){
+						if(!window.__ahcui_runtime_config__){
 							throw new Error("配置文件不存在配置节点"); 
 						}
 						if(!<%= prod %>)
 						{
-							window.__cui_runtime_config__.__app_public_path__="/"
+							window.__ahcui_runtime_config__.__app_public_path__="/"
 						}
-						loadDefaultResource(window.__cui_runtime_config__); 
-						loadWebpackResource(window.__cui_runtime_config__);
+						loadDefaultResource(window.__ahcui_runtime_config__); 
+						loadWebpackResource(window.__ahcui_runtime_config__);
 						body.removeChild(document.getElementById("runtime"));
 					}
 					catch(e){
