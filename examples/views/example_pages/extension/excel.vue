@@ -318,7 +318,7 @@
 </script>
 
 <style scoped>
-	*>>>.el-table-tool .el-tool {
+	:deep(.el-table-tool .el-tool) {
 		margin: 5px 0 5px auto;
 	}
   .el-list-scope-bodypaddingb{
@@ -359,3 +359,4 @@
 		margin-top: 15px;
 	}
 </style>
+

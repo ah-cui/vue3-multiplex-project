@@ -546,12 +546,19 @@ export default {
 .customer-table td.el-table__cell {
   border-bottom: none;
 }
-.el-list-scope-bodypadding{margin:15px;}
-*>>> .el-table thead{color: #303133 !important; font-weight: normal;/*background: #fafafa;*/}
 
-.el-table-tool-default{
+.el-list-scope-bodypadding {
+  margin: 15px;
+}
+
+:deep( .el-table thead) {
+  color: #303133 !important;
+  font-weight: normal; /*background: #fafafa;*/
+}
+
+.el-table-tool-default {
   margin-bottom: 0;
-  margin-top:10px;
+  margin-top: 10px;
   padding: 5px 15px;
   box-sizing: border-box;
   /*background: #fafafa;
@@ -559,15 +566,24 @@ export default {
   border-left: 1px solid #ededed;
   border-right: 1px solid #ededed;*/
 }
-*>>> .el-table th.el-table__cell{/*background: #fafafa !important;*/ height: 44px; font-weight: normal; color: #303133;}
-*>>> .el-tag--mini {
+
+:deep( .el-table th.el-table__cell) { /*background: #fafafa !important;*/
+  height: 44px;
+  font-weight: normal;
+  color: #303133;
+}
+
+:deep( .el-tag--mini ) {
   height: 20px;
   padding: 0 5px;
   line-height: 19px;
 }
-*>>> .el-table-tool .el-table-tool-title {
+
+:deep( .el-table-tool .el-table-tool-title) {
   flex: auto;
   margin-top: 5px;
-  margin-bottom: 5px;}
+  margin-bottom: 5px;
+}
 </style>
+
 

@@ -1,7 +1,5 @@
-//import "@ahcui/vue3-multiplex/dist/lib/css/ahcui.multiplex.min.css"
-//export {vue, app, ahcuiapi, router, store, mixin, elementPlus, axios, auth, NameSpace, namespace, eventDefine, eventBus, version ,runtimeCfg} from "@ahcui/vue3-multiplex";
 
-import "../../../../ahcui/static/css/main.css";
+import "@ahcui/vue3-multiplex/dist/lib/css/ahcui.multiplex.min.css";
 export {vue, 
     app, 
     ahcuiapi, 
@@ -19,4 +17,4 @@ export {vue,
     version ,
     runtimeCfg, 
     error,
-    locale,} from "../../../../ahcui/export";
+    locale} from "@ahcui/vue3-multiplex";

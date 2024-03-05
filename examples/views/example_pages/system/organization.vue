@@ -353,23 +353,89 @@ export default {
 </script>
 
 <style scoped>
-* {margin: 0px;padding: 0px;}
-.content {padding: 3px;height: 100%;overflow: hidden;}
-.content-aside {width: 23%;height: 95%;}
-.aside-btn01 {color: black;}
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+.content {
+  padding: 3px;
+  height: 100%;
+  overflow: hidden;
+}
+
+.content-aside {
+  width: 23%;
+  height: 95%;
+}
+
+.aside-btn01 {
+  color: black;
+}
+
 .aside-btn01:hover,
-.aside-btn01:focus {color: var(--element-ui-color-main);}
-.ahcui-workbench-card-scoped {height: 100% !important;}
-.el-select .el-input .el-select__caret {color: var(--el-select-input-color) !important;}
-.ahcui-workbench-card-scoped :deep(.el-card__body){height: 98% !important;}
-.el-table-tool-default{margin-bottom: 0;padding: 5px 15px;box-sizing: border-box;/*background: #fafafa;border-top: 1px solid #ededed;border-left: 1px solid #ededed;border-right: 1px solid #ededed;*/}
-.el-list-scope-bodypadding{margin:15px;}
-*>>> .el-table thead{color: #303133 !important; font-weight: normal;/*background: #fafafa;*/}
-*>>> .el-table th.el-table__cell{/*background: #fafafa !important;*/ height: 44px; font-weight: normal; color: #303133;}
-*>>> .el-input--default{ margin:5px 0px;}
-*>>> .el-table-tool-default .el-tool .el-tool-item{font-size: 16px;padding: 5px 6px;border-radius: 2px;border: 1px solid #e5e5e5;box-sizing: border-box;line-height: 1;}
-.sys-organization-list{height: calc(100vh - 264px);box-sizing: border-box;border-width: 1px;/*border-color:#ededed;*/border-style: solid;overflow: auto;}
-*>>> .el-tree-node__content{height:40px;}
+.aside-btn01:focus {
+  color: var(--element-ui-color-main);
+}
+
+.vs-workbench-card-scoped {
+  height: 100% !important;
+}
+
+.el-select .el-input .el-select__caret {
+  color: var(--el-select-input-color) !important;
+}
+
+.vs-workbench-card-scoped :deep(.el-card__body) {
+  height: 98% !important;
+}
+
+.el-table-tool-default {
+  margin-bottom: 0;
+  padding: 5px 15px;
+  box-sizing: border-box; /*background: #fafafa;border-top: 1px solid #ededed;border-left: 1px solid #ededed;border-right: 1px solid #ededed;*/
+}
+
+.el-list-scope-bodypadding {
+  margin: 15px;
+}
+
+:deep(.el-table thead) {
+  color: #303133 !important;
+  font-weight: normal; /*background: #fafafa;*/
+}
+
+:deep(.el-table th.el-table__cell) { /*background: #fafafa !important;*/
+  height: 44px;
+  font-weight: normal;
+  color: #303133;
+}
+
+:deep(.el-input--default) {
+  margin: 5px 0px;
+}
+
+:deep(.el-table-tool-default .el-tool .el-tool-item ) {
+  font-size: 16px;
+  padding: 5px 6px;
+  border-radius: 2px;
+  border: 1px solid #e5e5e5;
+  box-sizing: border-box;
+  line-height: 1;
+}
+
+.sys-organization-list {
+  height: calc(100vh - 264px);
+  box-sizing: border-box;
+  border-width: 1px; /*border-color:#ededed;*/
+  border-style: solid;
+  overflow: auto;
+}
+
+:deep(.el-tree-node__content) {
+  height: 40px;
+}
+
 .org-tree-group {
   border: 1px solid hsla(0, 0%, 60%, .15);
   height: calc(100vh - 262px);

@@ -209,99 +209,99 @@
 	}
 </script>
 <style scoped>
-	.el-scope-description-size h6 {
-		font-size: 16px;
-		color: #303133;
-		margin: 5px 0px 15px
-	}
+.el-scope-description-size h6 {
+  font-size: 16px;
+  color: #303133;
+  margin: 5px 0px 15px
+}
 
-	.el-scope-description-size p {
-		color: #606266;
-		margin-bottom: 15px;
-	}
+.el-scope-description-size p {
+  color: #606266;
+  margin-bottom: 15px;
+}
 
-  .el-step__head.is-process .el-step__icon.is-text {
-    color: #fff;
-    border-color: #33cc99;
-    background: #33cc99;
-  }
+.el-step__head.is-process .el-step__icon.is-text {
+  color: #fff;
+  border-color: #33cc99;
+  background: #33cc99;
+}
 
 
 	.input-with-select :deep(.el-select .el-input) {
 		width: 100px;
 	}
 
-	.el-form-padding {
-		padding-left: 7.5px;
-		padding-right: 7.5px;
-	}
+.el-form-padding {
+  padding-left: 7.5px;
+  padding-right: 7.5px;
+}
 
-	.el-select {
-		display: block;
-	}
+.el-select {
+  display: block;
+}
 
-	*>>>.el-form-item__content {
-		line-height: 36px;
-	}
+:deep(.el-form-item__content) {
+  line-height: 36px;
+}
 
-	*>>>.el-form-item--small .el-form-item__label {
-		line-height: 36px;
-	}
+:deep(.el-form-item--small .el-form-item__label) {
+  line-height: 36px;
+}
 
-	.el-body {
-		padding: 15px;
-	}
+.el-body {
+  padding: 15px;
+}
 
-	.el-steps-horizontal {
-		margin: 10px 0 45px 0;
-	}
+.el-steps-horizontal {
+  margin: 10px 0 45px 0;
+}
 
-	.el-result-scoped {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		flex-direction: column;
-		text-align: center;
-		box-sizing: border-box;
-		padding: 0px 30px;
-		margin-bottom: 15px;
-	}
+.el-result-scoped {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 0px 30px;
+  margin-bottom: 15px;
+}
 
-	*>>>.el-alert__title {
-		color: #303133;
-	}
+:deep(.el-alert__title) {
+  color: #303133;
+}
 
-	*>>>.el-alert__icon {
-		color: #1890ff;
-	}
+:deep(.el-alert__icon) {
+  color: #1890ff;
+}
 
-	.el-form-detail .el-form-item {
-		margin-bottom: 10px;
-	}
+.el-form-detail .el-form-item {
+  margin-bottom: 10px;
+}
 
-	.el-bg-info-lighter {
-		background-color: #f4f4f5;
-		text-align: left;
-		padding: 24px 40px;
-		border-radius: 4px;
-	}
+.el-bg-info-lighter {
+  background-color: #f4f4f5;
+  text-align: left;
+  padding: 24px 40px;
+  border-radius: 4px;
+}
 
 /*	.el-alert-border.is-light.el-alert--info {
 		border: 1px solid #91d5ff;
 		background: #e6f7ff;
 	}*/
 
-	.el-result-actions {
-		margin-top: 32px;
-	}
+.el-result-actions {
+  margin-top: 32px;
+}
 
-	.el-page-title {
-		font-size: 19px;
-		color: #303133;
-	}
+.el-page-title {
+  font-size: 19px;
+  color: #303133;
+}
 
-	.el-page-header .el-page-desc {
-		margin-top: 8px;
-		color: #909399;
-	}
+.el-page-header .el-page-desc {
+  margin-top: 8px;
+  color: #909399;
+}
 </style>

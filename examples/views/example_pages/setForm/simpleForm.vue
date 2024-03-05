@@ -241,33 +241,46 @@
 	})
 </script>
 <style scoped>
-	.el-card {
-		border: none;
-		/*background: #fff;*/
-		border-radius: 4px;
-		overflow: hidden;
-	}
-	.el-select--default {
-		width: 100%;
-	}
-.el-page-header{
+.el-card {
+  border: none;
+  /*background: #fff;*/
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.el-select--default {
+  width: 100%;
+}
+
+.el-page-header {
   /*padding: 20px 25px 16px 25px;*/
   /*background: #ffffff;*/
   display: block;
 }
-.el-page-title{
-    font-size: 19px;
-    color: #303133;
-  }
-.el-page-header .el-page-desc{
-    margin-top: 8px;
-    color: #909399;
-  }
-.el-list-scope-bodypadding{
-  padding:15px;
-}
-  *>>> .el-form-item__content{display: block !important;}
 
-  *>>> .el-radio__inner{ border:1px #dcdfe6 solid !important;}
-  *>>> .el-range-editor.el-input__inner{width:100%;}
+.el-page-title {
+  font-size: 19px;
+  color: #303133;
+}
+
+.el-page-header .el-page-desc {
+  margin-top: 8px;
+  color: #909399;
+}
+
+.el-list-scope-bodypadding {
+  padding: 15px;
+}
+
+:deep( .el-form-item__content) {
+  display: block !important;
+}
+
+:deep( .el-radio__inner) {
+  border: 1px #dcdfe6 solid !important;
+}
+
+:deep( .el-range-editor.el-input__inner) {
+  width: 100%;
+}
 </style>

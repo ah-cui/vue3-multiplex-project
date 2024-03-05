@@ -561,7 +561,7 @@
 		height: 250px;
 	}
 
-  *>>> .header .el-card__body{
+	:deep(.header .el-card__body){
     width: 100%;
     display: flex;
     justify-content: space-between;

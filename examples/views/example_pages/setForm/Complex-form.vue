@@ -368,8 +368,8 @@
 	.el-select--default {
 		width: 100%;
 	}
-  *>>> .el-range-editor.el-input__inner{width:100%}
-  *>>> .el-bottom-tool {
+  :deep( .el-range-editor.el-input__inner){width:100%}
+  :deep( .el-bottom-tool) {
     position: fixed;
     bottom: 0;
     right: 0;
@@ -382,11 +382,11 @@
     transition: padding-left .3s cubic-bezier(.2,0,0,1) 0s;
     z-index: 98;
   }
-  *>>> .el-bottom-tool .el-bottom-tool-actions {
+  :deep( .el-bottom-tool .el-bottom-tool-actions) {
     flex: 1;
     text-align: right;
   }
-  *>>> .el-bottom-tool .el-card__body{
+  :deep( .el-bottom-tool .el-card__body){
     float:right;
     flex: 1;
     text-align: right;

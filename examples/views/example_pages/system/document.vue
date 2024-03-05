@@ -161,13 +161,32 @@ export default {
 </script>
 
 <style scoped>
-.el-table th.el-table__cell{/*background: #fafafa !important;*/ height: 44px; font-weight: normal; color: #303133;}
-*>>> .el-tag--mini {
+.el-table th.el-table__cell { /*background: #fafafa !important;*/
+  height: 44px;
+  font-weight: normal;
+  color: #303133;
+}
+
+:deep( .el-tag--mini) {
   height: 20px;
   padding: 0 5px;
   line-height: 19px;
+
 }
-.el-list-scope-bodypadding{margin:15px;}
-*>>> .el-table thead{color: #303133 !important; font-weight: normal;background: #fafafa;}
-*>>> .el-table th.el-table__cell{/*background: #fafafa !important; */height: 44px; font-weight: normal; color: #303133;}
+
+.el-list-scope-bodypadding {
+  margin: 15px;
+}
+
+:deep( .el-table thead) {
+  color: #303133 !important;
+  font-weight: normal;
+  background: #fafafa;
+}
+
+:deep( .el-table th.el-table__cell) { /*background: #fafafa !important; */
+  height: 44px;
+  font-weight: normal;
+  color: #303133;
+}
 </style>

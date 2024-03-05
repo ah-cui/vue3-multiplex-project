@@ -29,7 +29,7 @@
   },
   "dependencies": {
     "@ahcui/vue-example": "file:examples",
-    "@ahcui/vue3-multiplex": "file:ahcui",
+    "@ahcui/vue3-multiplex": "file:ahcui-vue3-multiplex-1.0.0.tgz",
     "@ahcui/lib-jsext":"0.1.2",
     "@element-plus/icons-vue": "2.3.1",
     "axios": "1.6.7",

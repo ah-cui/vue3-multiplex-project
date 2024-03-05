@@ -241,5 +241,5 @@
 	.el-card.is-always-shadow {
 		box-shadow: none;
 	}
-  *>>> .el-form-item__label{width:auto !important}
+	:deep( .el-form-item__label){width:auto !important}
 </style>
